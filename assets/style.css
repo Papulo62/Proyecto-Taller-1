@@ -21,6 +21,7 @@ body {
 .navbar-link {
   text-decoration: none !important;
   color: white !important;
+  border-bottom: 2px solid white !important;
 }
 
 i {
@@ -189,6 +190,13 @@ section{
 
 .accordion-button {
   background-color: transparent !important;
+  font-weight: bold !important;
+  color: black !important;
+}
+
+.enlace-contactos {
+  color: white !important;
+  text-decoration: none !important;
 }
 
 footer {

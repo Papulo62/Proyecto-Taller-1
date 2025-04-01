@@ -13,4 +13,5 @@ class AuthController extends BaseController
     {
         $this->cargarVista('registro');
     }
+
 }

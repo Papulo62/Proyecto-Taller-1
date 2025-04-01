@@ -12,4 +12,5 @@ $routes->get('detalle_producto', 'ProductosController::vistaDetalleProducto');
 
 $routes->get('login', 'AuthController::index');
 $routes->get('registro', 'AuthController::vistaRegistro');
-
+$routes->get('preguntas_frecuentes', 'InfoController::index');
+$routes->get('contactos', 'InfoController::vistaContactos');
