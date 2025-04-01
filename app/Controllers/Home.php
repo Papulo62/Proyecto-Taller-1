@@ -4,10 +4,8 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function index(): string
+    public function index()
     {
-        echo view($this->header);
-        echo view('inicio');
-        return view($this->footer);
+        $this->cargarVista('inicio');
     }
 }

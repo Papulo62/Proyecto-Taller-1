@@ -4,17 +4,13 @@ namespace App\Controllers;
 
 class AuthController extends BaseController
 {
-    public function index(): string
+    public function index()
     {
-        echo view($this->header);
-        echo view('login');
-        return view($this->footer);
+        $this->cargarVista('login');
     }
 
-    public function vistaRegistro(): string
+    public function vistaRegistro()
     {
-        echo view($this->header);
-        echo view('registro');
-        return view($this->footer);
+        $this->cargarVista('registro');
     }
 }

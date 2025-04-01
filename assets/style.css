@@ -14,13 +14,8 @@ body {
   font-style: normal;
 }
 
-.enlace-envio {
-  display: flex;
-  gap: 30px;
-}
-
-.enlace-envio a {
-  text-decoration: none;
+.margin-text {
+  margin-top: 115px;
 }
 
 .navbar-link {
@@ -36,18 +31,19 @@ i {
   display: flex;
   gap: 15px;
   align-items: center;
-  padding: 5px 20px;
+  padding: 5px 30px;
   color: white;
   background-color: black;
   border: 1px solid white;
 }
 
 .btn-genero {
-  padding: 7px 25px;
+  padding: 7px 35px;
   background-color: black;
   color: white;
   font-weight: bold;
   border-radius: 5px;
+  border: none;
 }
 
 .img-running {
@@ -129,8 +125,10 @@ section{
 .btn-img {
   position: absolute;
   left: 10px;
+  border: none;
   bottom: 10px;
-  border-radius: 15px;
+  border-radius: 10px;
+  font-weight: bold;
   background-color: white;
   color: black;
   padding: 5px 15px;
@@ -146,16 +144,24 @@ section{
   display: flex;
   padding: 20px;
   flex-wrap: wrap;
+  max-width:600px;
   gap: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   align-items: center;
-  max-width: 400px;
   border: 1px solid gray;
 }
 
-.producto-talle h6 {
+.btn-talle {
+  padding: 5px 15px;
+  border: none;
+  background-color: white;
   border: 1px solid black;
-  padding: 5px;
+  color: black;
+}
+
+.btn-talle:hover {
+  background-color: black;
+  color: white;
 }
 
 .carrito-item {
@@ -181,12 +187,16 @@ section{
   padding: 5px 20px;
 }
 
+.accordion-button {
+  background-color: transparent !important;
+}
+
 footer {
   background-color: black;
   display: flex;
-  margin-top: 100px;
-  padding: 50px 40px;
   justify-content: space-between;
+  margin-top: 100px;
+  padding: 25px 40px;
   color: white;
 }
 
@@ -199,14 +209,19 @@ footer {
 }
 
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 988px) {
   .container-producto {
     grid-template-columns: auto auto auto;
   }
+
 }
 
 @media screen and (max-width: 768px) {
   
+  .margin-text {
+    margin-top: 65px;
+  }
+
   .navbar-link {
     color: black !important;
   }
@@ -227,10 +242,12 @@ footer {
   .btn-img {
     background-color: black;
     color: white;
+    padding: 10px 30px;
     position: static;
     bottom: 0;
     left: 0;
   }
+
 }
 @media screen and (max-width: 600px) {
   html {

@@ -27,8 +27,6 @@ abstract class BaseController extends Controller
      * @var CLIRequest|IncomingRequest
      */
     protected $request;
-    protected $header = "header";
-    protected $footer = "footer";
     /**
      * An array of helpers to be loaded automatically upon
      * class instantiation. These helpers will be availablegit
@@ -53,5 +51,12 @@ abstract class BaseController extends Controller
         // Preload any models, libraries, etc, here.
 
         // E.g.: $this->session = service('session');
+    }
+
+    public function cargarVista($vista)
+    {
+        echo view('header');
+        echo view($vista);
+        echo view('footer');
     }
 }

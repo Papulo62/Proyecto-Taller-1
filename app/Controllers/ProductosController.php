@@ -4,10 +4,13 @@ namespace App\Controllers;
 
 class ProductosController extends BaseController
 {
-    public function index(): string
-    {
-        echo view($this->header);
-        echo view('productos');
-        return view($this->footer);
-    }
+  public function index()
+  {
+    $this->cargarVista('productos');
+  }
+
+  public function vistaDetalleProducto()
+  {
+    $this->cargarVista('detalle_producto');
+  }
 }

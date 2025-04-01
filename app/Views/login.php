@@ -1,4 +1,4 @@
-<section class="d-flex pb-5 gap-3 flex-column align-items-center">
+<section class="d-flex pb-5 gap-3 flex-column align-items-center" style="margin-top: 155px;">
   <h1 class="display-3 fw-bold mt-2 mt-lg-4">Iniciar sesión</h1>
   <div class="login-input">
     <label for="email">Correo electronico:</label>

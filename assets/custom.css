@@ -4553,7 +4553,7 @@ textarea.form-control-lg {
   font-size: 1rem;
   color: var(--bs-accordion-btn-color);
   text-align: left;
-  background-color: var(--bs-accordion-btn-bg);
+  background-color: transparent;
   border: 0;
   border-radius: 0;
   overflow-anchor: none;
@@ -4595,7 +4595,7 @@ textarea.form-control-lg {
 .accordion-button:focus {
   z-index: 3;
   outline: 0;
-  box-shadow: var(--bs-accordion-btn-focus-box-shadow);
+  box-shadow: none;
 }
 
 .accordion-header {

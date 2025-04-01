@@ -1,23 +1,15 @@
-<footer>
+<footer style="font-size: 1.2rem;">
   <div>
-    <h5>AYUDA</h5>
     <ul class="d-flex gap-3 flex-column mt-3 list-unstyled">
-      <li>CONTACTANOS</li>
+      <li>ACERCA DE</li>
+      <li>CONTACTO</li>
       <li>PREGUNTAS FRECUENTES</li>
       <li>TÉRMINOS Y CONDICIONES DE USO</li>
     </ul>
   </div>
   <div>
-    <h5>SOBRE NOSOTROS</h5>
-    <ul class="mt-3 list-unstyled">
-      <li>NUESTRA HISTORIA</li>
-    </ul>
-  </div>
-  <div>
-    <h5>SÍGUENOS</h5>
-    <div class="d-flex flex-column gap-3 mt-3">
+    <div class="d-flex flex-column gap-5 mt-3" style="font-size: 1.9rem;">
       <i class="fa-brands fa-facebook fa-x4" style="color: white"></i>
-      <i class="fa-brands fa-google" style="color: white"></i>
       <i class="fa-brands fa-x-twitter" style="color: white;"></i>
       <i class="fa-brands fa-instagram" style="color: white;"></i>
     </div>
