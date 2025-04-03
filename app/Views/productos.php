@@ -1,4 +1,12 @@
 <section class="d-flex px-5 flex-column" style="margin-top: 200px;">
+  <div class="d-flex justify-content-start mb-4" style="width: 100%;">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="<?php echo base_url('/') ?>">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Productos</li>
+      </ol>
+    </nav>
+  </div>
   <div class="d-flex justify-content-between align-items-center mb-5">
     <h1 class="fw-bold display-6 d-none d-md-block">ZAPATILLAS PARA HOMBRE</h1>
     <div class="dropdown">

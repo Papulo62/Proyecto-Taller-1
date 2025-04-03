@@ -1,5 +1,12 @@
 <section class="d-flex flex-column flex-lg-row gap-0 gap-lg-5 p-3" style="gap: 100px !important;">
   <div class="d-flex flex-column">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="<?php echo base_url('/') ?>">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="<?php echo base_url('/productos') ?>">Productos</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Zapatilla hombre</li>
+      </ol>
+    </nav>
     <h2 class="fw-bold d-block d-lg-none display-6">ZAPATILLAS T.350 MESH</h2>
     <h2 class="fw-bold d-block d-lg-none display-6">$50.578</h2>
     <div class="d-flex justify-content-center">

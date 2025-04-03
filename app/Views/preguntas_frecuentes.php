@@ -1,4 +1,12 @@
 <section class="d-flex flex-column gap-5">
+  <div class="d-flex justify-content-start px-3" style="width: 100%;">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="<?php echo base_url('/') ?>">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Preguntas frecuentes</li>
+      </ol>
+    </nav>
+  </div>
   <h1 class="text-center fw-bold dislpay-3">Preguntas Frecuentes</h1>
   <div class="accordion" id="accordionExample">
     <div class="accordion-item">
