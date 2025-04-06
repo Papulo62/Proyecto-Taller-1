@@ -44,11 +44,21 @@ i {
 
 .btn-genero {
   padding: 7px 35px;
-  background-color: black;
+  background-color: #1D4E89;
+  /*
+  otros colores que podemos usar
+  #FFD700
+  #A3D9A5
+  #8E1C28
+  */
   color: white;
   font-weight: bold;
   border-radius: 5px;
   border: none;
+}
+
+.btn-genero:hover {
+  background-color: gray;
 }
 
 .img-running {
@@ -123,6 +133,8 @@ section{
   border-bottom: 1px solid gray;
 }
 
+/*Animaciones de entrada: Puedes utilizar bibliotecas como AOS (Animate On Scroll) para animar los elementos conforme el usuario hace scroll.*/
+
 .container-img {
   position: relative;
 }
@@ -169,6 +181,18 @@ section{
   color: white;
 }
 
+.container-img {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.container-img img:hover {
+  transform: scale(1.05);
+}
+.container-img img {
+  transition: transform 0.3s ease;
+}
+
 .carrito-item {
   display: flex;
   flex-direction: column;
@@ -203,6 +227,10 @@ section{
   text-decoration: none !important;
 }
 
+.breadcrumb-item  a {
+  text-decoration: none !important;
+}
+
 footer {
   background-color: black;
   display: flex;
@@ -211,6 +239,15 @@ footer {
   padding: 25px 40px;
   color: white;
 }
+
+
+.btn-genero:hover,
+.btn-img:hover {
+  background-color: #101828;
+  color: white;
+  transform: scale(1.05);
+}
+
 
 @media screen and (max-width: 1200px) {
   .btn-buscar {

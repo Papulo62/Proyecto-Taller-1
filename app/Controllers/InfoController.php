@@ -13,4 +13,9 @@ class InfoController extends BaseController
     {
         $this->cargarVista('contactos');
     }
+
+    public function vistaComercializacion()
+    {
+        $this->cargarVista('comercializacion');
+    }
 }

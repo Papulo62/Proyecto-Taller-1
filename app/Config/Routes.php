@@ -14,3 +14,4 @@ $routes->get('login', 'AuthController::index');
 $routes->get('registro', 'AuthController::vistaRegistro');
 $routes->get('preguntas_frecuentes', 'InfoController::index');
 $routes->get('contactos', 'InfoController::vistaContactos');
+$routes->get('comercializacion', 'InfoController::vistaComercializacion');

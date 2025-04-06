@@ -22,11 +22,17 @@
   </div>
   <div class="container-producto">
     <?php for ($i = 1; $i <= 20; $i++): ?>
-      <div class="d-flex flex-column" style="width: 100%;">
-        <img width="100%" style="border: 1px solid gray;"
+      <div class="d-flex flex-column border border-dark" style="width: 100%;">
+        <div class="d-flex justify-content-between align-items-center p-2">
+          <h6 class="fw-bold">adidas</h6>
+          <h6 class="fw-bold">$150.999</h6>
+        </div>
+        <img width="100%" style="border-bottom: 1px solid black; border-top: 1px solid black"
           src="<?php echo base_url('img/Botines KING MATCH TT para niños.png') ?>" alt="">
-        <h6 class="mt-2">Zapatillas de running MagMax NITRO™ para hombre</h6>
-        <h6>$150.999</h6>
+        <div class="p-2">
+          <h6 class="fw-bold ">Zapatillas de running MagMax NITRO™
+            para hombre</h6>
+        </div>
       </div>
     <?php endfor; ?>
   </div>

@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="<?= base_url('assets/custom.css') ?>">
   <link rel="stylesheet" href="<?= base_url('assets/style.css') ?>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
