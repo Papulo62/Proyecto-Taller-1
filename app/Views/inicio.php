@@ -38,7 +38,7 @@
   </div>
 </div>
 
-<h2 class="text-center mt-5 mb-5 display-6 fw-bold" style="color: #101828 !important;">Zapatillas para cada ocasión,
+<h2 class="text-center mt-5 mb-5 display-6 fw-bold">Zapatillas para cada ocasión,
   comodidad y
   diseño a tu alcance >>>
 </h2>
@@ -51,7 +51,7 @@
           src="<?php echo base_url('img/25SS_Ecom_BR_Brand-Campaign-Running_CLP_Full-Bleed-Hero_Desk-Tab-Mob_1536x1536px_6.jpg') ?>"
           alt="hombre-corriendo">
       </div>
-      <h3 class="fw-bold">RUNNING HOMBRE</h3>
+      <h3 class="fw-bold fs-2">RUNNING HOMBRE</h3>
       <button type="button" class="btn-genero">
         Hombres
       </button>
@@ -68,10 +68,11 @@
     </div>
   <?php endfor; ?>
 </section>
-
 <section class="d-flex gap-3 px-5 mt-5 flex-column flex-md-row">
   <?php for ($i = 1; $i <= 3; $i++): ?>
-    <div class="container-img" data-aos="fade-up" data-aos-duration="1000" style="max-width: 700px;">
+    <?php $delay = ($i - 1) * 100; ?>
+    <div class="container-img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?= $delay ?>"
+      style=" max-width: 700px;">
       <img width="100%" src="<?php echo base_url('img/46569c17876de027e784948b8c8ba425.png') ?>" alt="">
       <button class="btn-img" type="button">Para hombres</button>
     </div>

@@ -47,3 +47,11 @@ $(document).ready(function () {
     });
   });
   
+
+  const navItem = document.querySelectorAll(".nav-item");
+
+  navItem.forEach(element => {
+      element.addEventListener("mouseover", () => {
+        console.log("evento creado");
+      })
+  });

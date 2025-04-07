@@ -1,4 +1,4 @@
-<section class="d-flex pb-5 gap-3 flex-column align-items-center" style="margin-top: 155px;">
+<section class="d-flex pb-5 gap-3 flex-column align-items-center">
   <div class="d-flex justify-content-start px-5" style="width: 100%;">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">

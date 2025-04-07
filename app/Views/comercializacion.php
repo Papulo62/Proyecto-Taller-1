@@ -72,3 +72,9 @@
     <li>Garantía: Todas nuestras zapatillas tienen una garantía de 6 meses contra defectos de fabricación.</li>
   </ul>
 </section>
+
+<ul class="navbar-nav gap-4 flex-grow-1">
+  <li class="nav-item"><a href="#">Mujeres</a></li>
+  <li class="nav-item"><a href="#">Hombres</a></li>
+  <li class="nav-item"><a href="#">Niños</a></li>
+</ul>

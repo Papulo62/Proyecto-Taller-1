@@ -42,7 +42,7 @@
     </div>
     <p class="fw-bold fs-4">Stock disponible: 30</p>
     <div class="d-flex flex-column gap-3">
-      <button class="btn-genero" type="button">Agregar al carrito</button>
+      <button class="btn-genero btn-cart" type="button">Agregar al carrito</button>
     </div>
   </div>
   <div class="accordion d-block d-lg-none mt-5" id="accordionExample">
