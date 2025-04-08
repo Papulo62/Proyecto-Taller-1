@@ -18,19 +18,34 @@ h1,h2,h3,p {
   color: #011627 !important;
 }
 
-.nav-item {
+.navbar-link {
   text-decoration: none !important;
   color: white !important;
   border-bottom: 2px solid white !important;
 }
 
-.nav-item a {
-  color: white;
-  text-decoration: none;
-}
-
 i {
   color: white;
+}
+
+.categorias {
+  background-color: white;
+  color: #011627;
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+.categorias ul li {
+  border-bottom: 2px solid black;
+}
+
+.categorias-active {
+  padding: 20px;
+  height: auto; /* o un valor específico en px si lo conoces */
+  opacity: 1;
 }
 
 .btn-buscar {
@@ -284,7 +299,7 @@ footer {
 
 @media screen and (max-width: 768px) {
   
-  .nav-item a{
+  .navbar-link {
     color: black !important;
   }
 

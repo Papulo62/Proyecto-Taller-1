@@ -48,10 +48,26 @@ $(document).ready(function () {
   });
   
 
-  const navItem = document.querySelectorAll(".nav-item");
+const navItems = document.querySelectorAll(".nav-item");
+const categorias = document.querySelector(".categorias");
+const navbar = document.querySelector(".navbar");
 
-  navItem.forEach(element => {
-      element.addEventListener("mouseover", () => {
-        console.log("evento creado");
-      })
-  });
+function mostrarCategorias() {
+  categorias.classList.add("categorias-active");
+}
+
+function mouseFuera(event) {
+  const fueraNav = navbar.contains(event.target);
+  const fueraCategorias = categorias.contains(event.target);
+  if (!fueraNav && !fueraCategorias) {
+    categorias.classList.remove("categorias-active");
+  }
+}
+
+navItems.forEach((element) => {
+  element.addEventListener("mouseover", mostrarCategorias);
+});
+
+categorias.addEventListener("mouseover", mostrarCategorias);
+
+document.addEventListener("mouseover", mouseFuera);

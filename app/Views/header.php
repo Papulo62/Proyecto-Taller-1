@@ -23,6 +23,7 @@
       monto minimo
     </p>
   </header>
+  </div>
   <nav class="navbar navbar-expand-md py-4 px-4 fs-5"
     style="background-color: black !important; position: sticky; top: 0; z-index: 1000;">
     <button class="navbar-toggler" style="border: none" type="button" data-bs-toggle="offcanvas"
