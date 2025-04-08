@@ -1,4 +1,4 @@
-<section class="d-flex px-5 flex-column" style="margin-top: 200px;">
+<section class="d-flex px-5 flex-column mt-3">
   <div class="d-flex justify-content-start mb-4" style="width: 100%;">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
@@ -22,18 +22,20 @@
   </div>
   <div class="container-producto">
     <?php for ($i = 1; $i <= 20; $i++): ?>
-      <div class="d-flex flex-column border border-dark" style="width: 100%;">
-        <div class="d-flex justify-content-between align-items-center p-2">
-          <h6 class="fw-bold">adidas</h6>
-          <h6 class="fw-bold">$150.999</h6>
+      <a style="text-decoration: none;" href="<?php echo base_url('/detalle_producto') ?>">
+        <div class="d-flex flex-column border border-dark" style="width: 100%;">
+          <div class="d-flex justify-content-between align-items-center p-2">
+            <h6 class="fw-bold">adidas</h6>
+            <h6 class="fw-bold">$150.999</h6>
+          </div>
+          <img width="100%" style="border-bottom: 1px solid black; border-top: 1px solid black"
+            src="<?php echo base_url('img/Botines KING MATCH TT para niños.png') ?>" alt="">
+          <div class="p-2">
+            <h6 class="fw-bold ">Zapatillas de running MagMax NITRO™
+              para hombre</h6>
+          </div>
         </div>
-        <img width="100%" style="border-bottom: 1px solid black; border-top: 1px solid black"
-          src="<?php echo base_url('img/Botines KING MATCH TT para niños.png') ?>" alt="">
-        <div class="p-2">
-          <h6 class="fw-bold ">Zapatillas de running MagMax NITRO™
-            para hombre</h6>
-        </div>
-      </div>
+      </a>
     <?php endfor; ?>
   </div>
   <div class="mt-5" style="font-size: 0.8rem;">

@@ -1,4 +1,4 @@
-<section class="d-flex flex-column gap-3 align-items-center">
+<section class="d-flex flex-column gap-3 align-items-center mt-5">
   <h1 class="text-center fw-bold display-4">Consultas</h1>
   <div class="login-input">
     <label for="name">Nombre:</label>

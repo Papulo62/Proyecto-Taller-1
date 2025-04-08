@@ -18,4 +18,14 @@ class InfoController extends BaseController
     {
         $this->cargarVista('comercializacion');
     }
+
+    public function vistaTerminos()
+    {
+        $this->cargarVista('terminos_y_uso');
+    }
+
+    public function vistaAcerca()
+    {
+        $this->cargarVista('acerca_de');
+    }
 }

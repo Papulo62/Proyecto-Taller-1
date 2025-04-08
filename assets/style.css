@@ -60,7 +60,7 @@ i {
 
 .btn-genero {
   padding: 7px 35px;
-  background-color: #1D4E89;
+  background-color: black;
   /*
   otros colores que podemos usar
   #FFD700
@@ -142,6 +142,11 @@ i {
   background-color: black;
   border-color: transparent;
   height: 50px;
+  transition: all 0.3s ease;
+}
+
+.login-input button:hover {
+  background-color: gray;
 }
 
 .login-cuenta {
@@ -271,7 +276,7 @@ footer {
 
 .btn-genero:hover,
 .btn-img:hover {
-  background-color: #101828;
+  background-color: gray;
   color: white;
   transform: scale(1.05);
 }

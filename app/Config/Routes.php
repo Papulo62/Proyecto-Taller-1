@@ -16,3 +16,5 @@ $routes->get('preguntas_frecuentes', 'InfoController::index');
 $routes->get('contactos', 'InfoController::vistaContactos');
 $routes->get('comercializacion', 'InfoController::vistaComercializacion');
 $routes->get('consultas', 'ConsultasController::index');
+$routes->get('termnos_y_uso', 'InfoController::vistaTerminos');
+$routes->get('acerca_de', 'InfoController::vistaAcerca');
