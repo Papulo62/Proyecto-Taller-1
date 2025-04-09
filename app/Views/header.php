@@ -35,21 +35,45 @@
         <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body align-items-center">
-        <ul class="navbar-nav gap-4 flex-grow-1">
-          <li class="nav-item">
+        <ul class="navbar-nav flex-grow-1">
+          <li class="nav-item position-relative">
             <a class="navbar-link" href="#">
               Mujeres
             </a>
+            <div class="popover position-absolute">
+              <ul class="list-unstyled d-flex flex-column gap-3">
+                <li>Running</li>
+                <li>Futbol</li>
+                <li>Basquet</li>
+                <li>Voley</li>
+              </ul>
+            </div>
           </li>
           <li class="nav-item">
             <a class="navbar-link" href="#">
               Hombres
             </a>
+            <div class="popover position-absolute">
+              <ul class="list-unstyled d-flex flex-column gap-3">
+                <li>Running</li>
+                <li>Futbol</li>
+                <li>Basquet</li>
+                <li>Voley</li>
+              </ul>
+            </div>
           </li>
           <li class="nav-item">
             <a class="navbar-link" href="#">
               Niños
             </a>
+            <div class="popover position-absolute">
+              <ul class="list-unstyled d-flex flex-column gap-3">
+                <li>Running</li>
+                <li>Futbol</li>
+                <li>Basquet</li>
+                <li>Voley</li>
+              </ul>
+            </div>
           </li>
       </div>
     </div>

@@ -17,34 +17,51 @@ body {
 h1,h2,h3,p {
   color: #011627 !important;
 }
+.navbar-link-active {
+  border-bottom: 2px solid white !important;
+}
+
 
 .navbar-link {
   text-decoration: none !important;
   color: white !important;
-  border-bottom: 2px solid white !important;
+  transition: all 0.2s ease-in-out;
 }
 
+.navbar-link-disable {
+  border: 0 !important;
+  color: gray !important;
+}
 i {
   color: white;
 }
 
-.categorias {
+.popover {
   background-color: white;
   color: #011627;
   padding: 0;
   height: 0;
+  font-size: 16px;
   overflow: hidden;
+  top:65px;
   opacity: 0;
   transition: height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
 }
-
-.categorias ul li {
+.nav-item{
+  padding: 22px 16px;
+  cursor: pointer;
+}
+.navbar{
+  padding: 0 22px!important;
+}
+.popover ul li {
   border-bottom: 2px solid black;
 }
 
-.categorias-active {
-  padding: 20px;
-  height: auto; /* o un valor específico en px si lo conoces */
+.popover-active {
+  padding: 16px 50px 16px 15px;
+  height: auto;
+  /*height: fit-content;* podria cambiar despues*/
   opacity: 1;
 }
 
@@ -284,6 +301,7 @@ footer {
 .btn-genero,.btn-img {
   transition: transform 0.3s ease;
 }
+
 
 
 @media screen and (max-width: 1200px) {

@@ -49,25 +49,19 @@ $(document).ready(function () {
   
 
 const navItems = document.querySelectorAll(".nav-item");
-const categorias = document.querySelector(".categorias");
 const navbar = document.querySelector(".navbar");
 
-function mostrarCategorias() {
-  categorias.classList.add("categorias-active");
+
+const togglePopover = (event)=> {
+  const popoverTrigger = event.target;
+  popoverTrigger.querySelector('.popover').classList.toggle('popover-active');
+    navItems.forEach(item => {
+      let navLink = item.querySelector(".navbar-link");
+      let linkClass = item == popoverTrigger ? 'navbar-link-active' : 'navbar-link-disable'
+      event.type == 'mouseenter' ? navLink.classList.add(linkClass) : navLink.classList.remove(linkClass)
+    })
 }
-
-function mouseFuera(event) {
-  const fueraNav = navbar.contains(event.target);
-  const fueraCategorias = categorias.contains(event.target);
-  if (!fueraNav && !fueraCategorias) {
-    categorias.classList.remove("categorias-active");
-  }
-}
-
-navItems.forEach((element) => {
-  element.addEventListener("mouseover", mostrarCategorias);
-});
-
-categorias.addEventListener("mouseover", mostrarCategorias);
-
-document.addEventListener("mouseover", mouseFuera);
+navItems.forEach(item =>{
+  item.addEventListener('mouseenter', togglePopover);
+  item.addEventListener('mouseleave', togglePopover);
+})

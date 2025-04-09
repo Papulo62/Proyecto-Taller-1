@@ -1,11 +1,3 @@
-<div class="categorias">
-  <ul class="list-unstyled d-flex justify-content-between align-items-center my-0">
-    <li>Running</li>
-    <li>Futbol</li>
-    <li>Basquet</li>
-    <li>Voley</li>
-  </ul>
-</div>
 <div>
   <div id="carouselExampleIndicators" class="carousel slide">
     <div class="carousel-indicators">
