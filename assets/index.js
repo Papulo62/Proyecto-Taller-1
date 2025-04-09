@@ -61,7 +61,9 @@ const togglePopover = (event)=> {
       event.type == 'mouseenter' ? navLink.classList.add(linkClass) : navLink.classList.remove(linkClass)
     })
 }
-navItems.forEach(item =>{
-  item.addEventListener('mouseenter', togglePopover);
-  item.addEventListener('mouseleave', togglePopover);
+document.addEventListener('DOMContentLoaded', () => {
+  navItems.forEach(item =>{
+    item.addEventListener('mouseenter', togglePopover);
+    item.addEventListener('mouseleave', togglePopover);
+  })
 })
