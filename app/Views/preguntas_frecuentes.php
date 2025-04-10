@@ -1,4 +1,4 @@
-<section class="d-flex flex-column gap-5 mt-3">
+<section class="container-xl d-flex flex-column gap-5 mt-4">
   <div class="d-flex justify-content-start px-3" style="width: 100%;">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">

@@ -322,6 +322,10 @@ footer {
 
 @media screen and (max-width: 768px) {
   
+  .navbar {
+    padding: 22px !important;
+  }
+
   .navbar-link {
     color: black !important;
   }
