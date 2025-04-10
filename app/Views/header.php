@@ -85,7 +85,7 @@
       </button>
       <a href="#">
         <i class="fa-regular fa-heart"></i></a>
-      <a href="#">
+      <a href="<?php echo base_url('/carrito') ?>">
         <i class="fa-solid fa-cart-shopping"></i>
       </a>
       <a href="<?php echo base_url('/login') ?>">
