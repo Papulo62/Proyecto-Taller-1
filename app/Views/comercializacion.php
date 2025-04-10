@@ -2,14 +2,14 @@
   <h1 class="fw-bold text-center">Comercialización</h1>
   <div class="d-flex flex-column gap-3">
     <h2 class="fw-bold">Tipos de Entrega</h2>
-    <h3 class="fw-bold">Entrega Estándar:</h3>
+    <h3 class="fw-700">Entrega Estándar:</h3>
     <ul class="d-flex list-unstyled flex-column gap-2 mt-2">
       <li>Tiempo de entrega: 3-5 días hábiles.</li>
       <li>Costo: Gratuito en compras superiores a $15,000 ARS. Para compras menores, el costo de envío es de
         $1,500 ARS.</li>
       <li>Disponibilidad: Disponible para todas las zonas del país.</li>
     </ul>
-    <h3 class="fw-bold">Entrega Rápida:</h3>
+    <h3 class="fw-700">Entrega Rápida:</h3>
     <ul class="d-flex flex-column list-unstyled gap-2 mt-2">
       <li>Tiempo de entrega: 1-2 días hábiles.</li>
       <li>Costo: $4,500 ARS.</li>
@@ -21,14 +21,14 @@
   <div class="d-flex flex-column gap-3">
     <h2 class="fw-bold">Formas de Envío</h2>
     <div>
-      <h3 class="fw-bold">Envío a Domicilio:</h3>
+      <h3 class="fw-700">Envío a Domicilio:</h3>
       <p>Elige esta opción al momento de la compra y tu pedido será enviado directamente a la dirección que hayas
         proporcionado.</p>
       <p>Seguimiento: Te enviaremos un número de seguimiento para que puedas verificar el estado de tu envío en
         tiempo real.</p>
     </div>
     <div>
-      <h3 class="fw-bold">Envío a Punto de Recogida:</h3>
+      <h3 class="fw-700">Envío a Punto de Recogida:</h3>
       <p>Puedes optar por recoger tu pedido en una de nuestras tiendas físicas o puntos de recogida asociados.</p>
       <p>Sin costo adicional: El envío a punto de recogida es gratuito.</p>
       <p>Disponibilidad: Selecciona el punto de recogida más cercano durante el proceso de compra.</p>
@@ -37,22 +37,22 @@
   <div class="d-flex flex-column gap-3">
     <h2 class="fw-bold">Formas de Pago</h2>
     <div>
-      <h3 class="fw-bold">Tarjetas de Crédito/Débito:</h3>
+      <h3 class="fw-700">Tarjetas de Crédito/Débito:</h3>
       <p>Aceptamos tarjetas Visa, Mastercard, American Express, y otras tarjetas de crédito y débito. La
         transacción se procesa de manera segura a través de nuestra plataforma de pagos.</p>
     </div>
     <div>
-      <h3 class="fw-bold">Transferencia Bancaria:</h3>
+      <h3 class="fw-700">Transferencia Bancaria:</h3>
       <p>Ofrecemos la opción de pago mediante transferencia bancaria directa. Recibirás las instrucciones al
         momento de finalizar tu compra.</p>
     </div>
     <div>
-      <h3 class="fw-bold">Pago Contra Entrega:</h3>
+      <h3 class="fw-700">Pago Contra Entrega:</h3>
       <p>Esta opción está disponible solo en ciertas ubicaciones. Al elegir pago contra entrega, pagarás en
         efectivo o con tarjeta en el momento de la recepción de tu pedido.</p>
     </div>
     <div>
-      <h3 class="fw-bold">Cuotas sin Intereses:</h3>
+      <h3 class="fw-700">Cuotas sin Intereses:</h3>
       <p>En colaboración con plataformas de pago como Klarna o Sezzle, ofrecemos la posibilidad de pagar en 3, 6 o
         12 cuotas sin intereses. Esta opción estará disponible al momento de elegir el método de pago y es
         aplicable a compras superiores a $30,000 ARS.</p>
@@ -67,13 +67,13 @@
   </div>
   <div class="d-flex flex-column gap-3">
     <h2 class="fw-bold">Información Adicional para el Cliente</h2>
-    <h3 class="fw-bold">Promociones y Descuentos:</h3>
+    <h3 class="fw-700">Promociones y Descuentos:</h3>
     <p> Regístrate en nuestro boletín para recibir descuentos exclusivos y enterarte de
       nuestras promociones especiales.</p>
-    <h3 class="fw-bold">Atención al Cliente:</h3>
+    <h3 class="fw-700">Atención al Cliente:</h3>
     <p> Si tienes alguna pregunta o necesitas ayuda con tu compra, nuestro equipo de atención
       al cliente está disponible de lunes a viernes, de 9 a 18 hrs, vía correo electrónico o chat en vivo.</p>
-    <h3 class="fw-bold">Garantía:</h3>
+    <h3 class="fw-700">Garantía:</h3>
     <p> Todas nuestras zapatillas tienen una garantía de 6 meses contra defectos de fabricación.</p>
   </div>
 </section>

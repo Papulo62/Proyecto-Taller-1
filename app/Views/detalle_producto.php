@@ -7,7 +7,7 @@
         <li class="breadcrumb-item active" aria-current="page">Zapatilla hombre</li>
       </ol>
     </nav>
-    <h2 class="fw-bold d-block d-lg-none display-6">ZAPATILLAS T.350 MESH</h2>
+    <h2 class="fw-bold d-block d-lg-none display-6 mt-4">ZAPATILLAS T.350 MESH</h2>
     <h2 class="fw-bold d-block d-lg-none display-6">$50.578</h2>
     <div class="d-flex justify-content-center">
       <img width="100%" style="max-width: 700px;" src="<?php echo base_url('img/395345_02_sv01.png') ?>"
@@ -41,7 +41,16 @@
       <?php endfor; ?>
     </div>
     <p class="fw-bold fs-4">Stock disponible: 30</p>
-    <div class="d-flex flex-column gap-3">
+    <div class="d-flex flex-column gap-4">
+      <div class="d-flex gap-3">
+        <h3 class="fw-bold">Cantidad:</h3>
+        <div class="d-flex gap-2">
+          <button class="btn-ad" type="button">+</button>
+          <div style="width: 70px; border: 1px solid black;">
+          </div>
+          <button class="btn-ad" type="button">-</button>
+        </div>
+      </div>
       <button class="btn-genero btn-cart" type="button">Agregar al carrito</button>
     </div>
   </div>

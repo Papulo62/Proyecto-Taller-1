@@ -1,24 +1,31 @@
-<section class="d-flex">
+<section class="d-flex mt-5 px-4 gap-5 flex-column flex-md-row">
   <div class="carrito-item">
-    <h2>TU CARRITO</h2>
-    <div>
-      <img src="" alt="" class="carrito-img">
-      <div class="d-flex flex-column">
-        <p></p>
-        <p></p>
-      </div>
+    <h1 class="fw-bold mb-5">TU CARRITO</h1>
+    <div class="d-flex flex-column gap-3">
+      <?php for ($i = 0; $i <= 3; $i++): ?>
+        <div class="d-flex justify-content-between p-4" style="border: 1px solid black;">
+          <img width="30%" src="<?php echo base_url('img/Botines KING MATCH TT para niños.png') ?>" alt=""
+            class="carrito-img">
+          <div class="d-flex flex-column">
+            <p class="fw-bold">Zapatillas Superstar II Core Black</p>
+            </p>
+            <p class="fw-bold">Taller 42(UK)</p>
+          </div>
+          <p class="fw-bold">$ 189.999</p>
+        </div>
+      <?php endfor; ?>
     </div>
   </div>
   <div class="carrito-resumen">
-    <h4>RESUMEN DEL PEDIDO</h4>
-    <div>
-      <p>Producto</p>
-      <p>$160.000</p>
+    <h2 class="fw-bold">RESUMEN DEL PEDIDO</h2>
+    <div class="d-flex justify-content-between">
+      <p class="fw-bold">1 Producto</p>
+      <p class="fw-bold">$160.000</p>
     </div>
-    <div>
-      <p>Total</p>
-      <p>$160.000</p>
+    <div class="d-flex justify-content-between">
+      <p class="fw-bold">Total</p>
+      <p class="fw-bold">$160.000</p>
     </div>
-    <button type="button">Ir a pagar</button>
+    <button class="btn-genero" type="button">Ir a pagar</button>
   </div>
 </section>

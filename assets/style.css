@@ -14,7 +14,7 @@ body {
   font-style: normal;
 }
 
-h1,h2,h3,p {
+h1,h2,h3,h4,p {
   color: #011627 !important;
 }
 .navbar-link-active {
@@ -247,6 +247,7 @@ i {
 
 .carrito-resumen {
   display: flex;
+  gap: 20px;
   flex-direction: column;
   width: 40%;
 }
@@ -302,6 +303,14 @@ footer {
   transition: transform 0.3s ease;
 }
 
+.btn-ad {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: none;
+}
+
 
 
 @media screen and (max-width: 1200px) {
@@ -322,6 +331,10 @@ footer {
 
 @media screen and (max-width: 768px) {
   
+  .popover {
+    display: none;
+  }
+
   .navbar {
     padding: 22px !important;
   }
@@ -350,6 +363,14 @@ footer {
     position: static;
     bottom: 0;
     left: 0;
+  }
+
+  .carrito-item {
+    width: 100%;
+  }
+
+  .carrito-resumen {
+    width: 100%;
   }
 
 }

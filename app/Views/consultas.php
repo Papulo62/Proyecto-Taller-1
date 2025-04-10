@@ -1,5 +1,13 @@
-<section class="d-flex flex-column gap-3 align-items-center mt-5">
-  <h1 class="text-center fw-bold display-4">Consultas</h1>
+<section class="d-flex flex-column gap-3 align-items-center mt-4">
+  <div class="d-flex justify-content-start px-3" style="width: 100%;">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="<?php echo base_url('/') ?>">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Consultas</li>
+      </ol>
+    </nav>
+  </div>
+  <h1 class="text-center fw-bold display-4 mt-4">Consultas</h1>
   <div class="login-input">
     <label for="name">Nombre:</label>
     <input type="text" id="name" name="name" placeholder="Ingresá tu nombre:">
