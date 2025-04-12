@@ -10,7 +10,7 @@
     <h2 class="fw-bold d-block d-lg-none display-6 mt-4">ZAPATILLAS T.350 MESH</h2>
     <h2 class="fw-bold d-block d-lg-none display-6">$50.578</h2>
     <div class="d-flex justify-content-center">
-      <img width="100%" style="max-width: 700px;" src="<?php echo base_url('img/395345_02_sv01.png') ?>"
+      <img width="100%" style="max-width: 700px;" src="<?php echo base_url('assets/img/395345_02_sv01.png') ?>"
         alt="zapatilla-running">
     </div>
     <div class="accordion d-none d-lg-block" style="max-width: 600px;" id="accordionExample">

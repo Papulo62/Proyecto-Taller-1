@@ -13,4 +13,9 @@ class ProductosController extends BaseController
   {
     $this->cargarVista('detalle_producto');
   }
+
+  public function vistaFavoritos()
+  {
+    $this->cargarVista('favoritos');
+  }
 }

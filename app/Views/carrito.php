@@ -13,7 +13,7 @@
       <div class="d-flex flex-column gap-3">
         <?php for ($i = 0; $i <= 3; $i++): ?>
           <div class="d-flex justify-content-between p-4" style="border: 1px solid black;">
-            <img width="30%" src="<?php echo base_url('img/Botines KING MATCH TT para niños.png') ?>" alt=""
+            <img width="30%" src="<?php echo base_url('assets/img/Botines KING MATCH TT para niños.png') ?>" alt=""
               class="carrito-img">
             <div class="d-flex flex-column">
               <p class="fw-bold">Zapatillas Superstar II Core Black</p>

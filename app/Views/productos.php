@@ -29,7 +29,7 @@
             <h6 class="fw-bold">$150.999</h6>
           </div>
           <img width="100%" style="border-bottom: 1px solid black; border-top: 1px solid black"
-            src="<?php echo base_url('img/Botines KING MATCH TT para niños.png') ?>" alt="">
+            src="<?php echo base_url('assets/img/Botines KING MATCH TT para niños.png') ?>" alt="">
           <div class="p-2">
             <h6 class="fw-bold ">Zapatillas de running MagMax NITRO™
               para hombre</h6>

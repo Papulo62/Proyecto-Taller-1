@@ -6,10 +6,9 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
-
 $routes->get('productos', 'ProductosController::index');
 $routes->get('detalle_producto', 'ProductosController::vistaDetalleProducto');
-
+$routes->get('favoritos', 'ProductosController::vistaFavoritos');
 $routes->get('login', 'AuthController::index');
 $routes->get('registro', 'AuthController::vistaRegistro');
 $routes->get('preguntas_frecuentes', 'InfoController::index');
