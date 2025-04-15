@@ -75,6 +75,12 @@
               </ul>
             </div>
           </li>
+          <li class="nav-item">
+            <a href="<?php echo base_url('/productos') ?>" class="navbar-link">Catálogo</a>
+          </li>
+          <li class="nav-item">
+            <a href="<?php echo base_url('/acerca_de') ?>" class="navbar-link">Sobre Nosotros</a>
+          </li>
       </div>
     </div>
     <div class="d-flex gap-4 align-items-center justify-content-sm-end">

@@ -7,12 +7,12 @@
       </ol>
     </nav>
   </div>
-  <div class="d-flex gap-5 flex-column flex-md-row">
+  <div class="d-flex gap-5 flex-column flex-lg-row">
     <div class="carrito-item">
       <h1 class="fw-bold mb-5">TU CARRITO</h1>
       <div class="d-flex flex-column gap-3">
         <?php for ($i = 0; $i <= 3; $i++): ?>
-          <div class="d-flex justify-content-between p-4" style="border: 1px solid black;">
+          <div class="d-flex justify-content-between p-2 p-md-4" style="border: 1px solid black;">
             <img width="30%" src="<?php echo base_url('assets/img/Botines KING MATCH TT para niños.png') ?>" alt=""
               class="carrito-img">
             <div class="d-flex flex-column">
@@ -20,7 +20,12 @@
               </p>
               <p class="fw-bold">Taller 42(UK)</p>
             </div>
-            <p class="fw-bold">$ 189.999</p>
+            <div>
+              <p class="fw-bold">$ 189.99</p>
+              <button type="button" style="border: none;">
+                <i class="fa-solid fa-trash" style="color: black;"></i>
+              </button>
+            </div>
           </div>
         <?php endfor; ?>
       </div>

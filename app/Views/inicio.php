@@ -59,6 +59,7 @@
   <?php endfor; ?>
 </section>
 
+<h2 class="fw-bold px-5 mb-4 display-6" style="margin-top: 100px;">Novedades >>>></h2>
 <section class="d-flex gap-5 px-5 mt-5 carrousel">
   <?php for ($i = 1; $i <= 6; $i++): ?>
     <div style="max-width: 400px;">
