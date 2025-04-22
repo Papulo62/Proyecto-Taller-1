@@ -72,8 +72,7 @@
 <section class="d-flex gap-3 px-5 mt-5 flex-column flex-md-row">
   <?php for ($i = 1; $i <= 3; $i++): ?>
     <?php $delay = ($i - 1) * 100; ?>
-    <div class="container-img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?= $delay ?>"
-      style=" max-width: 700px;">
+    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?= $delay ?>" style=" max-width: 700px;">
       <img width="100%" src="<?php echo base_url('assets/img/46569c17876de027e784948b8c8ba425.png') ?>" alt="">
       <button class="btn-img" type="button">Para hombres</button>
     </div>

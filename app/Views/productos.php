@@ -1,4 +1,4 @@
-<section class="d-flex px-5 flex-column mt-3">
+<section class="d-flex px-3 px-lg-5 flex-column mt-3">
   <div class="d-flex justify-content-start mb-4" style="width: 100%;">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
@@ -23,12 +23,12 @@
   <div class="container-producto">
     <?php for ($i = 1; $i <= 20; $i++): ?>
       <a style="text-decoration: none;" href="<?php echo base_url('/detalle_producto') ?>">
-        <div class="d-flex flex-column border border-dark" style="width: 100%;">
+        <div class="d-flex flex-column" style="width: 100%; border: 1px solid gray">
           <div class="d-flex justify-content-between align-items-center p-2">
             <h6 class="fw-bold">adidas</h6>
             <h6 class="fw-bold">$150.999</h6>
           </div>
-          <img width="100%" style="border-bottom: 1px solid black; border-top: 1px solid black"
+          <img width="100%" style="border-bottom: 1px solid gray; border-top: 1px solid gray"
             src="<?php echo base_url('assets/img/Botines KING MATCH TT para niños.png') ?>" alt="">
           <div class="p-2">
             <h6 class="fw-bold ">Zapatillas de running MagMax NITRO™
@@ -38,16 +38,5 @@
       </a>
     <?php endfor; ?>
   </div>
-  <div class="mt-5" style="font-size: 0.8rem;">
-    <h5>Calzado</h5>
-    <p>Para running, training o simplemente caminar por la ciudad, las zapatillas de hombre se han convertido en el
-      calzado ideal para trazar el propio camino. Quienes buscan diseño, tendencia y audacia, saben que en PUMA van a
-      encontrar esos modelos que representen su estilo de vida. Hay una amplia variedad de zapatillas de hombre y todas
-      ofrecen lo último en tecnología. Encontrarás la tecnología Running System, que aporta amortiguación o ProFoam, la
-      cual es la solución de mediasuela liviana de alto rebote; esta proporciona una amortiguación instantánea y una
-      buena respuesta al andar. Las zapatillas para hombre, además, han adoptado las últimas tendencias de moda, donde
-      la cultura urbana se ha apoderado de las calles. Desde las combinaciones de color más audaces hasta detalles
-      minuciosos, las zapatillas de hombre deportivas dan un paso más allá de lo convencional. Visitá nuestro sitio y
-      llevate ese par perfecto para vos. ¡Empezá a armar tu ruta!</p>
-  </div>
+
 </section>

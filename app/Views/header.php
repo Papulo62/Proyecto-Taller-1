@@ -30,6 +30,9 @@
       data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="fas fa-bars text-white"></span>
     </button>
+    <a href="<?php echo base_url(); ?>">
+      <img width="50px" class="bg-black" src="<?php echo base_url('assets/img/logo.png') ?>" alt="">
+    </a>
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
         <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -76,11 +79,9 @@
             </div>
           </li>
           <li class="nav-item">
-            <a href="<?php echo base_url('/productos') ?>" class="navbar-link">Catálogo</a>
+            <a href="<?php echo base_url('/productos') ?>" class="navbar-link">Productos</a>
           </li>
-          <li class="nav-item">
-            <a href="<?php echo base_url('/acerca_de') ?>" class="navbar-link">Sobre Nosotros</a>
-          </li>
+
       </div>
     </div>
     <div class="d-flex gap-4 align-items-center justify-content-sm-end">
@@ -89,7 +90,7 @@
         <i class="fa-solid fa-magnifying-glass"></i>
         <span class="d-none d-xl-inline">Buscar</span>
       </button>
-      <a href="#">
+      <a href="<?php echo base_url('/favoritos') ?>">
         <i class="fa-regular fa-heart"></i></a>
       <a href="<?php echo base_url('/carrito') ?>">
         <i class="fa-solid fa-cart-shopping"></i>

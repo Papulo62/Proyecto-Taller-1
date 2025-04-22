@@ -12,7 +12,9 @@
     <div class="row gap-5">
       <div class="col-12 text-start row gap-3">
         <h2 class="fw-bold ">Nosotros</h2>
-        <p class="fs-6">Desde que dimos nuestros primeros pasos en el mundo del calzado deportivo online, nuestra pasión
+        <p class="fs-6" style="text-align: justify;">Desde que dimos nuestros primeros pasos en el mundo del calzado
+          deportivo online,
+          nuestra pasión
           por las zapatillas ha sido el motor que nos impulsa.
           Nacimos con la visión de ofrecerte no solo un producto, sino una experiencia que te conecte con el calzado
           ideal para cada aventura.
@@ -26,7 +28,8 @@
       </div>
       <div class="col-12 text-start row gap-3">
         <h2 class="fw-bold ">Objetivos</h2>
-        <p class="fs-6 ">Desde que dimos nuestros primeros pasos en el mundo del calzado deportivo online, nuestra
+        <p class="fs-6" style="text-align: justify;">Desde que dimos nuestros primeros pasos en el mundo del calzado
+          deportivo online, nuestra
           pasión por las zapatillas ha sido el motor que nos impulsa.
           Nacimos con la visión de ofrecerte no solo un producto, sino una experiencia que te conecte con el calzado
           ideal para cada aventura.
@@ -41,7 +44,8 @@
       </div>
       <div class="col-12 text-start row gap-3">
         <h2 class="fw-bold ">Trayectoria</h2>
-        <p class="fs-6 ">Desde que dimos nuestros primeros pasos en el mundo del calzado deportivo online, nuestra
+        <p class="fs-6" style="text-align: justify;">Desde que dimos nuestros primeros pasos en el mundo del calzado
+          deportivo online, nuestra
           pasión por las zapatillas ha sido el motor que nos impulsa.
           Nacimos con la visión de ofrecerte no solo un producto, sino una experiencia que te conecte con el calzado
           ideal para cada aventura.

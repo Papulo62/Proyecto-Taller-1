@@ -10,8 +10,8 @@
   <h1 class="fw-bold text-center display-4 mb-5">Favoritos</h1>
   <div class="container-favoritos">
     <?php for ($i = 0; $i <= 6; $i++): ?>
-      <div class="d-flex gap-5 p-3" style="border: 1px solid black">
-        <div class="d-flex align-items-center" style="width: 20%;">
+      <div class="d-flex gap-5 p-3" style="border: 1px solid gray">
+        <div class="d-flex align-items-center" style="width: 25%;">
           <img width="100%" src="<?php echo base_url('assets/img/Botines KING MATCH TT para niños.png') ?>" alt="">
         </div>
         <div class="d-flex flex-column flex-md-row justify-content-between flex-grow-1">
@@ -22,8 +22,8 @@
           <div class="d-flex flex-column gap-3">
             <p class="text-start text-md-end">$160.999</p>
             <button class="btn-genero" type="button">Agregar al carrito</button>
-            <button class="btn-trash" type="button">Eliminar
-              <i class="fa-solid fa-trash" style="color: black;"></i>
+            <button class="btn-trash" type="button">
+              Eliminar
             </button>
           </div>
         </div>

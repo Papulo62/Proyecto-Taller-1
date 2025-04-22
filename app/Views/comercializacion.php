@@ -40,16 +40,21 @@
       <h3 class="fw-700">Tarjetas de Crédito/Débito:</h3>
       <p>Aceptamos tarjetas Visa, Mastercard, American Express, y otras tarjetas de crédito y débito. La
         transacción se procesa de manera segura a través de nuestra plataforma de pagos.</p>
+      <img src="<?php echo base_url('assets/img/tarjetas-debito.png') ?>" alt="tarjeta-de-debito" width="100%">
     </div>
     <div>
       <h3 class="fw-700">Transferencia Bancaria:</h3>
-      <p>Ofrecemos la opción de pago mediante transferencia bancaria directa. Recibirás las instrucciones al
-        momento de finalizar tu compra.</p>
+      <div class="d-flex gap-3 align-items-center">
+        <p class="my-0">Ofrecemos la opción de pago mediante transferencia bancaria directa. Recibirás las instrucciones
+          al
+          momento de finalizar tu compra.</p>
+        <img src="<?php echo base_url('assets/img/transferencia-bancaria.png') ?>" alt="transferencia-bancaria"
+          width="60px">
+      </div>
     </div>
-    <div>
-      <h3 class="fw-700">Pago Contra Entrega:</h3>
-      <p>Esta opción está disponible solo en ciertas ubicaciones. Al elegir pago contra entrega, pagarás en
-        efectivo o con tarjeta en el momento de la recepción de tu pedido.</p>
+    <div class="d-flex gap-4 align-items-center">
+      <h3 class="fw-700">Mercado Pago:</h3>
+      <img height="150px" src="<?php echo base_url('assets/img/mercado-pago.png') ?>" alt="mercado-pago">
     </div>
     <div>
       <h3 class="fw-700">Cuotas sin Intereses:</h3>

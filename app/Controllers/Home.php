@@ -8,4 +8,9 @@ class Home extends BaseController
     {
         $this->cargarVista('inicio');
     }
+
+    public function vistaCompra()
+    {
+        $this->cargarVista('compra');
+    }
 }

@@ -1,7 +1,8 @@
 <footer style="font-size: 1.2rem;">
   <ul class="d-flex gap-3 flex-column mt-3 list-unstyled">
-    <li> <a class="enlace-contactos" href="<?php echo base_url('/acerca_de') ?>"> ACERCA DE</a></li>
-    <li><a class="enlace-contactos" href="<?php echo base_url('/contactos') ?>"> CONTACTO</a></li>
+    <li> <a class="enlace-contactos" href="<?php echo base_url('/comercializacion') ?>">COMERCIALIZACION</a></li>
+    <li> <a class="enlace-contactos" href="<?php echo base_url('/acerca_de') ?>">SOBRE NOSOTROS</a></li>
+    <li><a class="enlace-contactos" href="<?php echo base_url('/consultas') ?>"> CONSULTAS</a></li>
     <li> <a class="enlace-contactos" href="<?php echo base_url('/preguntas_frecuentes') ?>">PREGUNTAS FRECUENTES</a>
     </li>
     <li> <a class="enlace-contactos" href="<?php echo base_url('/terminos_y_uso') ?>">TÉRMINOS Y CONDICIONES DE USO</a>
