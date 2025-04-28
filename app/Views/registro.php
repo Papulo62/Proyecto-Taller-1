@@ -8,7 +8,7 @@
     </nav>
   </div>
   <h1 class="display-3 fw-bold mt-2 mt-lg-4">Crear cuenta</h1>
-  <div class="login-input">
+  <div class="container-input">
     <label for="name">Nombre:</label>
     <input type="text" id="name" name="name" placeholder="Ingresá tu nombre:">
     <label for="username">Apellido:</label>

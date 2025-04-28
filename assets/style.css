@@ -83,9 +83,8 @@ i {
   border: 1px solid white;
 }
 
-
 /*es el boton que mas usamos, hay que cambiarle el nombre*/
-.btn-genero {
+.btn-base {
   padding: 8px 35px;
   background-color: black;
   /*
@@ -100,26 +99,13 @@ i {
   border: none;
 }
 
-.btn-genero:hover,
+.btn-base:hover,
 .btn-img:hover {
   background-color: gray;
   color: white;
 }
 
-.btn-trash {
-  padding: 7px 35px;
-  background-color: white;
-  color: black;
-  border: 1px solid rgb(124, 124, 124);
-  font-weight: bold;
-  border-radius: 5px;
-}
-
-.btn-trash:hover {
-  border-color: black;
-}
-
-.btn-genero,.btn-img, .btn-trash {
+.btn-base,.btn-img {
   transition: transform 0.3s ease;
 }
 
@@ -173,25 +159,25 @@ i {
 }
 
 /* esto se usa en la vista del login, registro y consultas, hay que cambiarle el nombre a uno mas general*/
-.login-input {
+.container-input {
   display: flex;
   font-weight: bold;
   flex-direction: column;
   gap: 15px;
 }
 
-.login-input input {
+.container-input input {
   height: 50px;
   border-radius: 10px;
   padding-left: 20px;
   width: 450px;
   border:2px solid rgb(190, 190, 190);
 }
-.login-input input:focus{
+.container-input input:focus{
   border-color: black
 }
 
-.login-input textarea {
+.container-input textarea {
   height: 150px;
   width: 450px;
   padding-top: 10px;
@@ -200,7 +186,7 @@ i {
   border:2px solid rgb(190, 190, 190);
 }
 
-.login-input button {
+.container-input button {
   width: 450px;
   border-radius: 10px;
   color: white;
@@ -212,8 +198,12 @@ i {
   transition: all 0.3s ease;
 }
 
-.login-input button:hover {
+.container-input button:hover {
   background-color: gray;
+}
+
+.compra-input input {
+  width: 320px;
 }
 
 .login-cuenta {
@@ -252,7 +242,6 @@ i {
 .img-running {
   object-position: 50% 50%;
 }
-
 
 /* boton de las 3 imagenes que se encuentran abajo en el inicio*/
 .btn-img {
@@ -418,15 +407,10 @@ footer {
     font-size: 0.85rem;
   }
 
-  .login-input input,.login-input textarea, .login-input button {
+  .container-input input,.container-input textarea, .container-input button {
     width: 350px;
   }
   .carrito-item {
     font-size: 0.75rem;
-  }
-
-  .btn-trash {
-    padding: 7px 12px;
-    gap: 10px;
   }
 }

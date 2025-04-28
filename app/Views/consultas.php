@@ -8,7 +8,7 @@
     </nav>
   </div>
   <h1 class="text-center fw-bold display-4 mt-4">Consultas</h1>
-  <div class="login-input">
+  <div class="container-input">
     <label for="name">Nombre:</label>
     <input type="text" id="name" name="name" placeholder="Ingresá tu nombre:">
     <label for="username">Apellido:</label>

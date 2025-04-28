@@ -81,7 +81,9 @@
           <li class="nav-item">
             <a href="<?php echo base_url('/productos') ?>" class="navbar-link">Productos</a>
           </li>
-
+          <li class="nav-item">
+            <a href="<?php echo base_url('/sobre_nosotros') ?>" class="navbar-link">Sobre Nosotros</a>
+          </li>
       </div>
     </div>
     <div class="d-flex gap-4 align-items-center justify-content-sm-end">

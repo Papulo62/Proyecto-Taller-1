@@ -8,7 +8,7 @@
     </nav>
   </div>
   <h1 class="display-3 fw-bold mt-2 mt-lg-4">Iniciar sesión</h1>
-  <div class="login-input">
+  <div class="container-input">
     <label for="email">Correo electronico:</label>
     <input type="text" id="email" name="email" placeholder="Ingresá tu correo electronico">
     <label for="password">Contraseña:</label>

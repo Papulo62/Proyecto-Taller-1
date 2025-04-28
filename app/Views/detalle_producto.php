@@ -51,7 +51,7 @@
           <button class="btn-ad" type="button">-</button>
         </div>
       </div>
-      <button class="btn-genero btn-cart" type="button">Agregar al carrito</button>
+      <button class="btn-base btn-cart" type="button">Agregar al carrito</button>
     </div>
   </div>
   <div class="accordion d-block d-lg-none mt-5" id="accordionExample">

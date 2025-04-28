@@ -24,8 +24,8 @@ class InfoController extends BaseController
         $this->cargarVista('terminos_y_uso');
     }
 
-    public function vistaAcerca()
+    public function vistaSobreNosotros()
     {
-        $this->cargarVista('acerca_de');
+        $this->cargarVista('sobre_nosotros');
     }
 }

@@ -44,29 +44,40 @@
 </h2>
 
 <section class="d-flex gap-4 mt-4 px-5 flex-md-row flex-column">
-  <?php for ($i = 1; $i <= 2; $i++): ?>
-    <div class="d-flex flex-column align-items-center gap-3">
-      <div class="container-img" data-aos="fade-up" data-aos-duration="1000">
-        <img class="img-running" width="100%"
-          src="<?php echo base_url('assets/img/25SS_Ecom_BR_Brand-Campaign-Running_CLP_Full-Bleed-Hero_Desk-Tab-Mob_1536x1536px_6.jpg') ?>"
-          alt="hombre-corriendo">
-      </div>
-      <h3 class="fw-bold fs-2">RUNNING HOMBRE</h3>
-      <button type="button" class="btn-genero">
-        Hombres
-      </button>
+  <div class="d-flex flex-column align-items-center gap-3">
+    <div class="container-img" data-aos="fade-up" data-aos-duration="1000">
+      <img class="img-running" width="100%"
+        src="<?php echo base_url('assets/img/25SS_Ecom_BR_Brand-Campaign-Running_CLP_Full-Bleed-Hero_Desk-Tab-Mob_1536x1536px_6.jpg') ?>"
+        alt="hombre-corriendo">
     </div>
-  <?php endfor; ?>
+    <h3 class="fw-bold fs-2">RUNNING HOMBRE</h3>
+    <button type="button" class="btn-base">
+      Hombres
+    </button>
+  </div>
+  <div class="d-flex flex-column align-items-center gap-3">
+    <div class="container-img" data-aos="fade-up" data-aos-duration="1000">
+      <img class="img-running" width="100%"
+        src="<?php echo base_url('assets/img/25SS_Ecom_BR_Brand-Campaign-Running_CLP_Full-Bleed-Hero_Desk-Tab-Mob_1536x1536px_5.jpg') ?>"
+        alt="mujer-corriendo">
+    </div>
+    <h3 class="fw-bold fs-2">RUNNING MUJER</h3>
+    <button type="button" class="btn-base">
+      Mujeres
+    </button>
+  </div>
 </section>
 
 <h2 class="fw-bold px-5 mb-4 display-6" style="margin-top: 100px;">Novedades >>>></h2>
 <section class="d-flex gap-5 px-5 mt-5 carrousel">
   <?php for ($i = 1; $i <= 6; $i++): ?>
-    <div style="max-width: 400px;">
-      <img width="100%" src="<?php echo base_url('assets/img/395345_02_sv01.png') ?>" alt="">
-      <h5 class="fw-bold">Zapatillas de running MagMax NITRO™ para hombre</h5>
-      <h5 class="fw-bold">$80.899</h5>
-    </div>
+    <a class="text-decoration-none" href="<?php echo base_url('/detalle_producto') ?>">
+      <div style="max-width: 400px; cursor: pointer;">
+        <img width="100%" src="<?php echo base_url('assets/img/395345_02_sv01.png') ?>" alt="">
+        <h5 class="fw-bold">Zapatillas de running MagMax NITRO™ para hombre</h5>
+        <h5 class="fw-bold">$80.899</h5>
+      </div>
+    </a>
   <?php endfor; ?>
 </section>
 <section class="d-flex gap-3 px-5 mt-5 flex-column flex-md-row">
@@ -78,7 +89,6 @@
     </div>
   <?php endfor; ?>
 </section>
-
 <div class="mt-5">
   <img width="100%" data-aos="fade-up" data-aos-duration="1000"
     src="<?php echo base_url('assets/img/imagen-runnig.webp') ?>" alt="imagen-running">
