@@ -53,9 +53,10 @@ abstract class BaseController extends Controller
         // E.g.: $this->session = service('session');
     }
 
-    public function cargarVista($vista)
+    public function cargarVista($vista, $data = [])
     {
-        echo view('header');
+        $data['titulo'] = $data['titulo'] ?? 'Título por defecto';
+        echo view('header', $data);
         echo view($vista);
         echo view('footer');
     }

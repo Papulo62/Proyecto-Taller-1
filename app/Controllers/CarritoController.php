@@ -6,7 +6,7 @@ class CarritoController extends BaseController
 {
     public function index()
     {
-        $this->cargarVista('carrito');
+        $this->cargarVista('carrito', ['titulo' => 'Carrito']);
     }
 
 }

@@ -6,16 +6,16 @@ class ProductosController extends BaseController
 {
   public function index()
   {
-    $this->cargarVista('productos');
+    $this->cargarVista('productos', ['titulo' => 'Productos']);
   }
 
   public function vistaDetalleProducto()
   {
-    $this->cargarVista('detalle_producto');
+    $this->cargarVista('detalle_producto', ['titulo' => 'Detalle de Producto']);
   }
 
   public function vistaFavoritos()
   {
-    $this->cargarVista('favoritos');
+    $this->cargarVista('favoritos', ['titulo' => 'Favoritos']);
   }
 }

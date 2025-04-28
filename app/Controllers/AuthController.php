@@ -6,12 +6,12 @@ class AuthController extends BaseController
 {
     public function index()
     {
-        $this->cargarVista('login');
+        $this->cargarVista('login', ['titulo' => 'Login']);
     }
 
     public function vistaRegistro()
     {
-        $this->cargarVista('registro');
+        $this->cargarVista('registro', ['titulo' => 'Registrarse']);
     }
 
 }

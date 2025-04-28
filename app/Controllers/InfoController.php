@@ -9,23 +9,18 @@ class InfoController extends BaseController
         $this->cargarVista('preguntas_frecuentes');
     }
 
-    public function vistaContactos()
-    {
-        $this->cargarVista('contactos');
-    }
-
     public function vistaComercializacion()
     {
-        $this->cargarVista('comercializacion');
+        $this->cargarVista('comercializacion', ['titulo' => 'Comercializacion']);
     }
 
     public function vistaTerminos()
     {
-        $this->cargarVista('terminos_y_uso');
+        $this->cargarVista('terminos_y_uso', ['titulo' => 'Terminos y Condiciones de Uso']);
     }
 
     public function vistaSobreNosotros()
     {
-        $this->cargarVista('sobre_nosotros');
+        $this->cargarVista('sobre_nosotros', ['titulo' => 'Sobre Nosotros']);
     }
 }

@@ -6,7 +6,7 @@ class ConsultasController extends BaseController
 {
     public function index()
     {
-        $this->cargarVista('consultas');
+        $this->cargarVista('consultas', ['titulo' => 'Consultas']);
     }
 
 }

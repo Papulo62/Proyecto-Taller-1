@@ -51,9 +51,11 @@
         alt="hombre-corriendo">
     </div>
     <h3 class="fw-bold fs-2">RUNNING HOMBRE</h3>
-    <button type="button" class="btn-base">
-      Hombres
-    </button>
+    <a href="<?php echo base_url('/productos') ?>">
+      <button type="button" class="btn-base">
+        Hombres
+      </button>
+    </a>
   </div>
   <div class="d-flex flex-column align-items-center gap-3">
     <div class="container-img" data-aos="fade-up" data-aos-duration="1000">
@@ -62,9 +64,11 @@
         alt="mujer-corriendo">
     </div>
     <h3 class="fw-bold fs-2">RUNNING MUJER</h3>
-    <button type="button" class="btn-base">
-      Mujeres
-    </button>
+    <a href="<?php echo base_url('/productos') ?>">
+      <button type="button" class="btn-base">
+        Mujeres
+      </button>
+    </a>
   </div>
 </section>
 
@@ -85,11 +89,18 @@
     <?php $delay = ($i - 1) * 100; ?>
     <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?= $delay ?>" style=" max-width: 700px;">
       <img width="100%" src="<?php echo base_url('assets/img/46569c17876de027e784948b8c8ba425.png') ?>" alt="">
-      <button class="btn-img" type="button">Para hombres</button>
+      <a href="<?php echo base_url('/productos') ?>">
+        <button class="btn-img" type="button">Para hombres</button>
+      </a>
     </div>
   <?php endfor; ?>
 </section>
 <div class="mt-5">
   <img width="100%" data-aos="fade-up" data-aos-duration="1000"
     src="<?php echo base_url('assets/img/imagen-runnig.webp') ?>" alt="imagen-running">
+</div>
+<div class="mt-5">
+  <h2 class="fw-bold mb-5 text-center display-5">Sal a correr y disfruta de un nuevo día</h2>
+  <video autoplay loop muted width="100%"
+    src="<?php echo base_url('assets/img/mixkit-typing-her-shoes-before-exercising-15060-hd-ready.mp4') ?>"></video>
 </div>

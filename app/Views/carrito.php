@@ -22,9 +22,9 @@
             </div>
             <div>
               <p class="fw-bold text-end text-md-start">$ 189.99</p>
-              <button class="btn-trash" type="button">
+              <button class="btn-base" type="button"
+                style="background-color: white; color: black; border: 1px solid black;">
                 Eliminar
-                <i class="fa-solid fa-trash" style="color: black;"></i>
               </button>
             </div>
           </div>
@@ -41,7 +41,7 @@
         <p class="fw-bold">Total</p>
         <p class="fw-bold">$160.000</p>
       </div>
-      <button class="btn-genero" type="button">Ir a pagar</button>
+      <button class="btn-base" type="button">Ir a pagar</button>
     </div>
   </div>
 </section>

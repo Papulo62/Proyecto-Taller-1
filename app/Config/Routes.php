@@ -12,7 +12,7 @@ $routes->get('favoritos', 'ProductosController::vistaFavoritos');
 $routes->get('login', 'AuthController::index');
 $routes->get('registro', 'AuthController::vistaRegistro');
 $routes->get('preguntas_frecuentes', 'InfoController::index');
-$routes->get('contactos', 'InfoController::vistaContactos');
+$routes->get('contactos', 'Home::vistaContactos');
 $routes->get('comercializacion', 'InfoController::vistaComercializacion');
 $routes->get('consultas', 'ConsultasController::index');
 $routes->get('terminos_y_uso', 'InfoController::vistaTerminos');
