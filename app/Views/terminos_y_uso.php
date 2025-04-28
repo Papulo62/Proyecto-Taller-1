@@ -23,11 +23,15 @@
     <li class="d-flex flex-column gap-3">
       <h2 class="">Identificación del vendedor</h2>
       <p>
-        [Nombre de tu Empresa/Nombre del Propietario]
-        [CUIT/CUIL]
-        [Domicilio Legal]
-        [Dirección de Correo Electrónico de Atención al Cliente]
-        [Número de Teléfono de Atención al Cliente (opcional)]
+        Cubilla Alexis Maximiliano<br>
+        20-46144591-9<br>
+        San Martin 1556<br>
+        lexis.cubilla@gmail.com<br>
+        3782-345678<br>
+
+        Coronel Antonio<br>
+        20-09345627-5<br>
+        Jujuy 3615<br>
       </p>
     </li>
     <li class="d-flex flex-column gap-3">
@@ -37,7 +41,6 @@
         marcas, modelos y tallas (en adelante, los "Productos").
       </p>
     </li>
-
     <li class="d-flex flex-column gap-3">
       <h2 class=>Proceso de Compra</h2>
       <ol>
@@ -49,7 +52,6 @@
             "Carrito de Compras".
           </p>
         </li>
-
         <li>
           <h3>Revisión de Pedidos</h3>
           <p>
@@ -57,7 +59,6 @@
             la descripción, cantidad y precio de los Productos, así como los costos de envío (si aplican).
           </p>
         </li>
-
         <li>
           <h3>Información del Cliente</h3>
           <p>
@@ -67,7 +68,6 @@
             precisa.
           </p>
         </li>
-
         <li>
           <h3>Formas de Pago</h3>
           <p>
@@ -78,7 +78,6 @@
             nombre.
           </p>
         </li>
-
         <li>
           <h3>Confirmación de Pedido</h3>
           <p>
@@ -91,7 +90,6 @@
             Online], sino que es un acuse de recibo.
           </p>
         </li>
-
         <li>
           <h3>Aceptación del Pedido</h3>
           <p>

@@ -352,6 +352,9 @@ footer {
   text-decoration: none !important;
 }
 
+/*Acerca_de*/
+
+
 /* las media queries se usan para controlar como se ven nuestros elementos a partir de cierto tamaño*/
 /*lo ocupamos para hacer resposive nuestra pagina*/
 @media screen and (max-width: 1200px) {
@@ -415,6 +418,19 @@ footer {
     position: static;
     bottom: 0;
     left: 0;
+  }
+
+  /*acerca_de moviles*/
+  .acerca_de_movil{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .acerca_de_imagen{
+    margin: 0px;
+    padding: 0px;
+    width: 80vw;
   }
 
 }
