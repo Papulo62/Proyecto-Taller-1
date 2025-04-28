@@ -10,7 +10,7 @@
   <h1 class="fw-bold text-center display-4 mb-5">Términos y condiciones de uso</h1>
   <ol class="d-flex flex-column gap-5">
     <li class="d-flex flex-column gap-3">
-      <h2 class="">Aceptación de los terminos y condiciones</h2>
+      <h2 class="">ceptación de los terminos y condiciones</h2>
       <p>
         Al acceder y utilizar el sitio web [Dirección de tu sitio web] (en adelante, el "Sitio Web") y realizar
         compras en él, usted (en adelante, el "Usuario" o "Cliente") acepta y se compromete a cumplir con los
@@ -37,7 +37,7 @@
     <li class="d-flex flex-column gap-3">
       <h2 class="">Objeto de la Tienda Online</h2>
       <p>
-        [Nombre de tu Tienda Online] es una tienda virtual dedicada a la comercialización de zapatillas de diversas
+        Esta empresa es una tienda virtual dedicada a la comercialización de zapatillas de diversas
         marcas, modelos y tallas (en adelante, los "Productos").
       </p>
     </li>
@@ -71,10 +71,8 @@
         <li>
           <h3>Formas de Pago</h3>
           <p>
-            [Nombre de tu Tienda Online] acepta las siguientes formas de pago: [Enumerar las formas de pago
-            aceptadas,
-            por ejemplo: tarjetas de crédito/débito (Visa, Mastercard, American Express, etc.), transferencias
-            bancarias, Mercado Pago, etc.]. El Usuario se compromete a utilizar una forma de pago válida y a su
+            Esta tienda acepta las siguientes formas de pago: tarjetas de crédito/débito (Visa, Mastercard, American Express, etc.), transferencias
+            bancarias, Mercado Pago. El Usuario se compromete a utilizar una forma de pago válida y a su
             nombre.
           </p>
         </li>
@@ -86,14 +84,13 @@
             Al hacerlo, se generará un número de pedido y el Usuario recibirá una confirmación por correo
             electrónico
             con los detalles de su compra.
-            Esta confirmación no implica la aceptación definitiva del pedido por parte de [Nombre de tu Tienda
-            Online], sino que es un acuse de recibo.
+            Esta confirmación no implica la aceptación definitiva del pedido por parte de esta tienda, sino que es un acuse de recibo.
           </p>
         </li>
         <li>
           <h3>Aceptación del Pedido</h3>
           <p>
-            [Nombre de tu Tienda Online] se reserva el derecho de aceptar o rechazar el pedido por motivos tales
+            Esta tienda se reserva el derecho de aceptar o rechazar el pedido por motivos tales
             como
             falta de stock, errores en la información del Producto o en el precio, o problemas con la autorización
             del
@@ -120,7 +117,7 @@
         <li>
           <h3>Modificaciones de Precio</h3>
           <p>
-            [Nombre de tu Tienda Online] se reserva el derecho de modificar los precios de los Productos en cualquier
+            Esta tienda se reserva el derecho de modificar los precios de los Productos en cualquier
             momento y sin previo aviso.
             Sin embargo, los precios aplicables al pedido del Usuario serán aquellos vigentes en el momento de la
             confirmación del mismo.
@@ -130,7 +127,7 @@
         <li>
           <h3>Herrores en Precios</h3>
           <p>
-            En caso de existir un error evidente en el precio de un Producto, [Nombre de tu Tienda Online] se reserva
+            En caso de existir un error evidente en el precio de un Producto, Esta tienda se reserva
             el derecho de cancelar el pedido y ofrecer al Usuario la posibilidad de realizar una nueva compra al
             precio correcto.
           </p>
@@ -143,16 +140,15 @@
         <li>
           <h3>Cobertura</h3>
           <p>
-            Los envíos se realizan dentro del territorio de [Especificar el territorio de envío, por ejemplo:
-            Argentina].
+            Los envíos se realizan dentro del territorio de Argentina].
           </p>
         </li>
 
         <li>
           <h3>Empresas de Envio</h3>
           <p>
-            Los envíos se realizarán a través de [Indicar las empresas de envío utilizadas, por ejemplo: Correo
-            Argentino, OCA, etc.].
+            Los envíos se realizarán a través de Correo
+            Argentino, OCA.
           </p>
         </li>
 
@@ -185,7 +181,7 @@
         <li>
           <h3>Demoras</h3>
           <p>
-            [Nombre de tu Tienda Online] no se responsabiliza por demoras en la entrega causadas por factores externos
+            Esta tienda no se responsabiliza por demoras en la entrega causadas por factores externos
             fuera de su control, tales como problemas logísticos de la empresa de envío, condiciones climáticas
             adversas, o fuerza mayor.
           </p>
@@ -206,8 +202,7 @@
       <h2>Propiedad Intelectual</h2>
       <p>
         Todos los contenidos del Sitio Web, incluyendo textos, imágenes, logotipos, diseños, gráficos, iconos,
-        software, y cualquier otro material, son propiedad exclusiva de [Nombre de tu Empresa/Nombre del
-        Propietario]
+        software, y cualquier otro material, son propiedad exclusiva de esta tienda/Cubilla Alexis y Antonio Coronel
         o de sus licenciantes y están protegidos por las leyes de propiedad intelectual e industrial vigentes en
         Argentina. Queda estrictamente prohibida la reproducción, distribución, modificación,
         o cualquier otro uso no autorizado de dichos contenidos sin el consentimiento previo y por escrito de
@@ -219,7 +214,7 @@
     <li class="d-flex flex-column gap-3">
       <h2 class="">Privacidad y Protección de Datos Personales</h2>
       <p>
-        [Nombre de tu Tienda Online] se compromete a proteger la privacidad de los Usuarios y a cumplir con la Ley de
+        Esta tienda se compromete a proteger la privacidad de los Usuarios y a cumplir con la Ley de
         Protección de Datos Personales N° 25.326 y sus normas complementarias.
         La información personal proporcionada por los Usuarios será utilizada únicamente para procesar sus pedidos,
         mejorar la experiencia de compra y enviar comunicaciones relacionadas con la tienda (promociones, novedades,
@@ -231,17 +226,17 @@
     <li class="d-flex flex-column gap-3">
       <h2 class="">Limitación de Responsabilidad</h2>
       <p>
-        En la medida máxima permitida por la ley aplicable, [Nombre de tu Tienda Online] no será responsable por daños
+        En la medida máxima permitida por la ley aplicable, Esta tienda no será responsable por daños
         indirectos, incidentales, especiales, consecuenciales o punitivos que resulten del uso o la imposibilidad de
         usar el Sitio Web o los Productos adquiridos a través de él.
-        La responsabilidad total de [Nombre de tu Tienda Online] por cualquier reclamo relacionado con la compra de
+        La responsabilidad total de esta tienda por cualquier reclamo relacionado con la compra de
         Productos estará limitada al importe pagado por el Usuario por dichos Productos.
       </p>
     </li>
     <li class="d-flex flex-column gap-3">
       <h2 class="">Modificaciones de los Términos y Condiciones</h2>
       <p>
-        [Nombre de tu Tienda Online] se reserva el derecho de modificar los presentes Términos y Condiciones en
+        Esta se reserva el derecho de modificar los presentes Términos y Condiciones en
         cualquier momento y sin previo aviso.
         Las modificaciones entrarán en vigencia a partir de su publicación en el Sitio Web. Se recomienda al Usuario
         revisar periódicamente los Términos y Condiciones para estar al tanto de cualquier cambio.
@@ -256,8 +251,8 @@
         Los presentes Términos y Condiciones se regirán e interpretarán de acuerdo con las leyes de la República
         Argentina.
         Cualquier controversia que surja en relación con estos Términos y Condiciones será sometida a la jurisdicción
-        de los tribunales ordinarios de la ciudad de [Ciudad donde tiene su domicilio legal la empresa],
-        Provincia de [Provincia donde tiene su domicilio legal la empresa], renunciando el Usuario a cualquier otro
+        de los tribunales ordinarios de la ciudad de Corrientes,
+        Provincia de Corrientes, renunciando el Usuario a cualquier otro
         fuero o jurisdicción que pudiera corresponder.
       </p>
     </li>
