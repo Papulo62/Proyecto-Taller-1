@@ -26,12 +26,15 @@
         proporcionado.</p>
       <p>Seguimiento: Te enviaremos un número de seguimiento para que puedas verificar el estado de tu envío en
         tiempo real.</p>
+      <img width="150px" src="<?php echo base_url('assets/img/domicilio.png') ?>" alt="envio-domicilio">
     </div>
     <div>
       <h3 class="fw-700">Envío a Punto de Recogida:</h3>
       <p>Puedes optar por recoger tu pedido en una de nuestras tiendas físicas o puntos de recogida asociados.</p>
       <p>Sin costo adicional: El envío a punto de recogida es gratuito.</p>
       <p>Disponibilidad: Selecciona el punto de recogida más cercano durante el proceso de compra.</p>
+      <img width="120px" class="mt-4 mb-4" src="<?php echo base_url('assets/img/punto-entrega.jpg') ?>"
+        alt="envio-punto-de-entrega">
     </div>
   </div>
   <div class="d-flex flex-column gap-3">

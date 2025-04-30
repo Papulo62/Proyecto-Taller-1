@@ -12,17 +12,17 @@
       <div class="carousel-item active">
         <img width="100%"
           src="<?php echo base_url("assets/img/25SS_Ecom_BR_Brand-Campaign-Running_Week-2_Homepage_Full-Bleed-Hero_Large-Desk_2000x694px (1).jpg") ?>"
-          alt="">
+          alt="grupo-gente-corriendo">
       </div>
       <div class="carousel-item">
         <img width="100%"
           src="<?php echo base_url("assets/img/25SS_Ecom_BR_Brand-Campaign-Running_Week-1_Homepage_Full-Bleed-Hero_Large-Desk_2000x694px.jpg") ?>"
-          alt="">
+          alt="mujer-cansada">
       </div>
       <div class="carousel-item">
         <img width="100%"
           src="<?php echo base_url("assets/img/25SS_Ecom_BR_Brand-Campaign-Running_Article-04_Full-Bleed-Hero_Large-Desk_2000x694px_2.jpg") ?>"
-          alt="">
+          alt="hombre-y-mujer-corriendo">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -88,10 +88,14 @@
   <?php for ($i = 1; $i <= 3; $i++): ?>
     <?php $delay = ($i - 1) * 100; ?>
     <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?= $delay ?>" style=" max-width: 700px;">
-      <img width="100%" src="<?php echo base_url('assets/img/46569c17876de027e784948b8c8ba425.png') ?>" alt="">
-      <a href="<?php echo base_url('/productos') ?>">
-        <button class="btn-img" type="button">Para hombres</button>
-      </a>
+      <img width="100%" src="<?php echo base_url('assets/img/46569c17876de027e784948b8c8ba425.png') ?>"
+        alt="imagen-persona-zapatilla">
+      <div class="container-btn-img">
+        <a href="<?php echo base_url('/productos') ?>">
+          <button class="btn-img" type="button">Para hombres</button>
+        </a>
+      </div>
+
     </div>
   <?php endfor; ?>
 </section>

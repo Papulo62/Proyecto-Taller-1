@@ -392,6 +392,12 @@ footer {
     position: static;
   }
 
+  .container-btn-img {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0px;
+  }
+
   .btn-img {
     background-color: black;
     color: white;

@@ -2,7 +2,7 @@
   <ul class="d-flex gap-3 flex-column mt-3 list-unstyled">
     <li> <a class="enlace-contactos" href="<?php echo base_url('/contactos') ?>">CONTACTO</a>
     </li>
-    <li> <a class="enlace-contactos" href="<?php echo base_url('/comercializacion') ?>">COMERCIALIZACION</a></li>
+    <li> <a class="enlace-contactos" href="<?php echo base_url('/comercializacion') ?>">COMERCIALIZACIÓN</a></li>
     <li><a class="enlace-contactos" href="<?php echo base_url('/consultas') ?>"> CONSULTAS</a></li>
     <li> <a class="enlace-contactos" href="<?php echo base_url('/preguntas_frecuentes') ?>">PREGUNTAS FRECUENTES</a>
     </li>
