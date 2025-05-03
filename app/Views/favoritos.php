@@ -21,8 +21,8 @@
           </div>
           <div class="d-flex flex-column gap-3">
             <p class="text-start text-md-end">$160.999</p>
-            <button class="btn-genero" type="button">Agregar al carrito</button>
-            <button class="btn-trash" type="button">
+            <button class="btn-base" type="button">Agregar al carrito</button>
+            <button class="btn-base" type="button" style="background-color: white; color: black; border: 1px solid black">
               Eliminar
             </button>
           </div>

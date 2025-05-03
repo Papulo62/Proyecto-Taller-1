@@ -48,7 +48,7 @@
       </div>
       <div class="d-flex flex-column gap-3">
         <h2 class="fw-bold">Pagar</h2>
-        <button class="btn-genero" type="button">Finalizar compra</button>
+        <button class="btn-base" type="button">Finalizar compra</button>
       </div>
     </div>
   </div>
