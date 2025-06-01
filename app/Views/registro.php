@@ -8,16 +8,40 @@
     </nav>
   </div>
   <h1 class="display-3 fw-bold mt-2 mt-lg-4">Crear cuenta</h1>
-  <div class="container-input">
+  <form method="post" action="<?php echo base_url('registrar') ?>" class="container-input">
     <label for="name">Nombre:</label>
-    <input type="text" id="name" name="name" placeholder="Ingresá tu nombre:">
-    <label for="username">Apellido:</label>
-    <input type="text" id="username" name="username" placeholder="Ingresá tu apellido:">
-    <label for="email">Correo electronico:</label>
-    <input type="text" id="email" name="email" placeholder="Ingresá tu correo electronico">
-    <label for="password">Contraseña:</label>
-    <input type="text" id="password" name="password" placeholder="Contraseña">
-    <button type="button">Crear cuenta</button>
+    <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre:"
+      value="<?php echo set_value('nombre') ?>" required>
+    <?php if (isset($validaciones) && $validaciones->hasError('nombre'))
+      echo $validaciones->getError('nombre') ?>
+      <label for="username">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido:"
+        value="<?php echo set_value('apellido') ?>" required>
+    <?php if (isset($validaciones) && $validaciones->hasError('apellido'))
+      echo $validaciones->getError('apellido') ?>
+      <label for="direccion">Direccion:</label>
+      <input type="text" id="direccion" name="direccion" placeholder="Ingrese su dirección:"
+        value="<?php echo set_value('direccion') ?>">
+    <?php if (isset($validaciones))
+      echo $validaciones->getError('direccion') ?>
+      <label for="email">Correo electronico:</label>
+      <input type="text" id="email" name="email" placeholder="Ingrese su correo electronico"
+        value="<?php echo set_value('email') ?>" required>
+    <?php if (isset($validaciones) && $validaciones->hasError('email'))
+      echo $validaciones->getError('email') ?>
+      <label for="contraseña">Contraseña:</label>
+      <input type="password" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña" required>
+    <?php if (isset($validaciones) && $validaciones->hasError('contraseña')) {
+      echo $validaciones->getError('contraseña');
+    }
+    ?>
+    <label for="c-contraseña">Confirmar Contraseña:</label>
+    <input type="password" id="c-contraseña" name="c-contraseña" placeholder="Confirmar contraseña" required>
+    <?php if (isset($validaciones) && $validaciones->hasError('c-contraseña')) {
+      echo $validaciones->getError('c-contraseña');
+    }
+    ?>
+    <button type="submit">Crear cuenta</button>
     <a class="text-center fs-5 fw-bold" href="<?php echo base_url('/login') ?>">¿Ya tenés una cuenta?</a>
-  </div>
+  </form>
 </section>

@@ -97,9 +97,23 @@
       <a href="<?php echo base_url('/carrito') ?>">
         <i class="fa-solid fa-cart-shopping"></i>
       </a>
-      <a href="<?php echo base_url('/login') ?>">
-        <i class="fa-regular fa-user"></i>
-      </a>
+      <?php if (!session()->get('user_id')): ?>
+        <a href="<?php echo base_url('/login') ?>">
+          <i class="fa-regular fa-user"></i>
+        </a>
+      <?php endif; ?>
+      <?php if (session()->get('user_id')): ?>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-regular fa-user"></i>
+            <span><?php echo session()->get('user_name'); ?></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="<?php echo base_url('/logout') ?>">Cerrar sesion</a></li>
+          </ul>
+        </div>
+      <?php endif; ?>
     </div>
   </nav>
   <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">

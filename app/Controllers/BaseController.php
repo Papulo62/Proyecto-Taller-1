@@ -60,4 +60,12 @@ abstract class BaseController extends Controller
         echo view($vista);
         echo view('footer');
     }
+
+    public function cargarVistaAdmin($vista, $data = [])
+    {
+        $data['titulo'] = $data['titulo'] ?? 'Panel Administrativo';
+        echo view('admin/header', $data);
+        echo view('admin/' . $vista);
+        echo view('admin/footer');
+    }
 }
