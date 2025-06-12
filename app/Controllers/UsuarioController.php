@@ -25,11 +25,8 @@ class UsuarioController extends BaseController
         if (!$usuario) {
             return redirect()->back()->with('error', 'Usuario no encontrado');
         }
-        $rol_actual = $usuario['rol_id'];
-        $nuevo_rol = ($rol_actual == 1) ? 2 : 1;
+        $nuevo_rol = ($usuario['rol_id'] == 1) ? 2 : 1;
         $this->usuarioModel->update($id, ['rol_id' => $nuevo_rol]);
         return redirect()->to('admin/usuarios')->with('success', 'Rol actualizado correctamente');
     }
-
-
 }

@@ -21,22 +21,22 @@
     </div>
   </div>
   <div class="container-producto">
-    <?php for ($i = 1; $i <= 20; $i++): ?>
-      <a style="text-decoration: none;" href="<?php echo base_url('/detalle_producto') ?>">
+    <?php foreach ($productos as $producto): ?>
+      <a style="text-decoration: none;" href="<?php echo base_url('detalle_producto/') . $producto['id'] ?>">
         <div class="d-flex flex-column" style="width: 100%; border: 1px solid gray">
           <div class="d-flex justify-content-between align-items-center p-2">
-            <h6 class="fw-bold">adidas</h6>
-            <h6 class="fw-bold">$150.999</h6>
+            <h6 class="my-0"><?php echo $producto['nombre'] ?></h6>
+            <h6 class="my-0">$<?php echo $producto['precio'] ?></h6>
           </div>
-          <img width="100%" style="border-bottom: 1px solid gray; border-top: 1px solid gray"
-            src="<?php echo base_url('assets/img/Botines KING MATCH TT para niños.png') ?>" alt="">
+          <div class="imagen-producto">
+            <img width="100%" style="border-bottom: 1px solid gray; border-top: 1px solid gray;"
+              src="<?php echo base_url('uploads/') . $producto['imagen'] ?>" alt="">
+          </div>
           <div class="p-2">
-            <h6 class="fw-bold ">Zapatillas de running MagMax NITRO™
-              para hombre</h6>
+            <h6 class="my-0"><?php echo $producto['descripcion'] ?></h6>
           </div>
         </div>
       </a>
-    <?php endfor; ?>
+    <?php endforeach; ?>
   </div>
-
 </section>

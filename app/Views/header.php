@@ -108,7 +108,7 @@
             <i class="fa-regular fa-user"></i>
             <span><?php echo session()->get('user_name'); ?></span>
           </button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="<?php echo base_url('/logout') ?>">Cerrar sesion</a></li>
           </ul>
