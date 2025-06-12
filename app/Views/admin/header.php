@@ -33,12 +33,12 @@
     <div class="offcanvas-body align-items-center">
       <ul class="navbar-nav flex-grow-1">
         <li class="nav-item position-relative">
-          <a class="navbar-link" href="#">
+          <a class="navbar-link" href="<?php echo base_url('admin/productos') ?>">
             Productos
           </a>
         </li>
         <li class="nav-item">
-          <a class="navbar-link" href="#">
+          <a class="navbar-link" href="<?php echo base_url('admin/consultas') ?>">
             Consultas
           </a>
         </li>

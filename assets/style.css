@@ -18,6 +18,48 @@ h1,h2,h3,h4,p {
   color: #011627 !important;
 }
 
+/*
+.talle-radio {
+    display: none; /* Ocultar el radio button nativo 
+}
+
+.btn-talle {
+    display: inline-block;
+    border: 2px solid #ddd;
+    background: white;
+    color: #333;
+    padding: 12px 18px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.btn-talle:hover {
+    border-color: #007bff;
+    background-color: #f8f9ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,123,255,0.2);
+}
+
+/* Cuando el radio está checked */
+/*
+.talle-radio:checked + .btn-talle {
+    border-color: #007bff;
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+}
+
+.talle-radio:focus + .btn-talle {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+*/
+
 /*barra de navegacion*/
 
 .navbar{
@@ -114,7 +156,8 @@ i {
   background-color: black;
   color: white;
   font-weight: bold;
-  padding: 5px 10px;
+  height: 50px;
+  width: 50px;
   border: none;
 }
 
@@ -127,7 +170,7 @@ i {
 
 .carrito-resumen {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   flex-direction: column;
   width: 40%;
 }
@@ -166,20 +209,37 @@ i {
   gap: 15px;
 }
 
-.container-input input {
+input, select {
   height: 50px;
   border-radius: 10px;
   padding-left: 20px;
-  width: 450px;
+  width: 100%;
   border:2px solid rgb(190, 190, 190);
 }
 .container-input input:focus{
   border-color: black
 }
+.btn-borrar-talle{
+  width: 50px;
+}
 
+.label-input-file{
+  height: 50px;
+  background-color: rgb(10, 122, 57);
+  width: 100%;
+  color:white;
+  font-weight: 600;
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  align-items: center;
+  padding-left: 20px;
+  border-radius: 10px;
+}
 .container-input textarea {
-  height: 150px;
-  width: 450px;
+  width: 100%;
+  resize: none;
   padding-top: 10px;
   border-radius: 10px;
   padding-left: 20px;
@@ -256,6 +316,21 @@ i {
   padding: 5px 15px;
 }
 
+.imagen-producto {
+    height: 25vw;
+    min-height: 240px;
+    max-height: 350px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  .imagen-producto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 1px 0px solid gray;
+  }
+
 /*contenedor de la vista de productos*/
 .container-producto {
   display: grid;
@@ -280,6 +355,10 @@ i {
   background-color: white;
   border: 1px solid black;
   color: black;
+}
+.btn-talle.active {
+  background-color: black;
+  color: white;
 }
 
 .btn-talle:hover {

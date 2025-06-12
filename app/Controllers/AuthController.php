@@ -14,7 +14,31 @@ class AuthController extends BaseController
     }
     public function index()
     {
-        $this->cargarVista('login', ['titulo' => 'Login']);
+        $validations = $this->validate([
+            'email' => [
+                'rules' => 'required|valid_email',
+                'errors' => [
+                    'required' => 'El email es obligatorio',
+                    'valid_email' => 'Debe ingresar un email válido',
+                ]
+            ],
+            'contraseña' => [
+                'rules' => 'required|min_length[8]',
+                'errors' => [
+                    'required' => 'La contraseña es obligatoria',
+                    'min_length' => 'La contraseña debe tener al menos 8 caracteres'
+                ]
+            ],
+        ]);
+
+        if ($validations) {
+            $this->cargarVista('login', ['titulo' => 'Login']);
+        } else {
+            $this->cargarVista('login', [
+                'titulo' => 'Login',
+                'validaciones' => $this->validator
+            ]);
+        }
     }
 
     public function vistaRegistro()
@@ -101,8 +125,6 @@ class AuthController extends BaseController
         }
         $rol_actual = $usuario['rol_id'];
         $nuevo_rol = ($rol_actual == 1) ? 2 : 1;
-
-        // Actualizar
         $this->usuarioModel->update($id, ['rol_id' => $nuevo_rol]);
         return redirect()->to('admin/usuarios')->with('success', 'Rol actualizado correctamente');
     }

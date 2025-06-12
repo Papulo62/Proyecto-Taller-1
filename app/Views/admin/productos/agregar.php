@@ -1,4 +1,4 @@
-<section class="container-xl mt-5 d-flex flex-column gap-3">
+<section class="container-xl mt-5 d-flex flex-column align-items-center gap-3">
   <?php if (session()->getFlashdata('success')): ?>
     <div class="alert alert-success alert-dismissible fade show" role="alert">
       <strong>¡Éxito!</strong> <?= session()->getFlashdata('success') ?>
@@ -13,24 +13,25 @@
     </div>
   <?php endif; ?>
   <h1 class="fw-bold display-4 text-center"><?php echo $titulo ?></h1>
-  <form method="post" action="<?php echo base_url('insertar') ?>">
+  <form class="d-flex flex-column gap-4" method="post" action="<?php echo base_url('admin/productos/insertar') ?>"
+    enctype="multipart/form-data">
     <div class="container-input">
       <label for="nombre">Nombre:</label>
       <input type="text" id="nombre" name="nombre" placeholder="Nombre del producto" required>
+      <?php if (isset($validaciones) && $validaciones->hasError('nombre'))
+        echo $validaciones->getError('nombre'); ?>
     </div>
     <div class="container-input">
       <label for="descripcion">Descripcion:</label>
-      <textarea name="descripcion" id="descipcion" placeholder="Descripcion" required></textarea>
-    </div>
-    <div class="form-group d-flex flex-column gap-2">
-      <label for="talle">Talle:</label>
-      <select name="talle" id="talle">
-        <option value="value1">Tarjeta de credito</option>
-      </select>
+      <textarea name="descripcion" id="descripcion" rows="5" placeholder="Descripcion" required></textarea>
+      <?php if (isset($validaciones) && $validaciones->hasError('descripcion'))
+        echo $validaciones->getError('descripcion'); ?>
     </div>
     <div class="container-input">
       <label for="precio">Precio:</label>
       <input type="text" id="precio" name="precio" placeholder="Ingrese el precio del producto" required>
+      <?php if (isset($validaciones) && $validaciones->hasError('precio'))
+        echo $validaciones->getError('precio'); ?>
     </div>
     <div class="form-group d-flex flex-column gap-2">
       <label for="categoria">Categoria:</label>
@@ -38,10 +39,34 @@
         <option value="value1">Tarjeta de credito</option>
       </select>
     </div>
-    <div class="form-group d-flex flex-column gap-2">
-      <label for="imagen">Imagen:</label>
-      <input type="file" name="imagen" id="imagen">
+    <div class="form-group cont-talle d-flex flex-column gap-3">
+      <button class="btn-base btn-agregar-talle mt-2" type="button">Agregar talle</button>
     </div>
-    <button type="submit">Agregar</button>
-  </form>
-</section>
+    <template>
+      <div class="d-flex gap-3">
+        <div class="d-flex flex-column gap-2">
+          <input type="text" name="talle_id[]" hidden>
+          <label for="talle">Talle:</label>
+          <input type="text" id="talle" name="talle[]" placeholder="Ingrese el talle">
+        </div>
+        <div class="d-flex flex-column gap-2">
+          <label for="stock">Cantidad:</label>
+          <input type="text" id="stock" name="stock[]" placeholder="Ingrese la cantidad">
+        </div>
+        <div class="d-flex align-items-end">
+          <button class="btn btn-danger btn-borrar-talle" type="button"><i class="fas fa-trash" data-placement="top"
+              title="Eliminar Talle"></i></button>
+        </div>
+      </div>
+    </template>
+
+    <div class="form-group d-flex flex-column gap-2">
+      <img id="img" width="350px" src="<?php echo base_url('uploads/') ?>" alt="">
+      <input type="file" name="imagen" class="d-none" id="imagen">
+      <label for="imagen" class="label-input-file"><i class="fas fa-upload"></i> Seleccionar Imagen</label>
+      <?php if (isset($validaciones) && $validaciones->hasError('imagen'))
+        echo $validaciones->getError('imagen') ?>
+      </div>
+      <button class="btn-base" type="submit">Agregar</button>
+    </form>
+  </section>

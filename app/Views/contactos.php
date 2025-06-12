@@ -14,18 +14,20 @@
   <h2 class="fw-bold">Telefonos: 3782-474653, 3782-411030</h2>
   <div class="d-flex flex-column mt-3 gap-3 align-items-center">
     <h2 class="fw-bold mt-4 mb-4 display-6">Comunicate con nosotros</h2>
-    <div class="container-input">
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" name="name" placeholder="Ingresá tu nombre:">
-      <label for="username">Apellido:</label>
-      <input type="text" id="username" name="username" placeholder="Ingresá tu apellido:">
-      <label for="email">Correo electronico:</label>
-      <input type="text" id="email" name="email" placeholder="Ingresá tu correo electronico">
-      <label for="consulta">Consulta</label>
-      <textarea name="consulta" id="consulta" placeholder="Consulta"></textarea>
-      <div>
-        <button type="button">Enviar</button>
+    <form method="post" action="<?php echo base_url('insertar') ?>">
+      <div class="container-input">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" placeholder="Ingresá tu nombre:">
+        <label for="username">Apellido:</label>
+        <input type="text" id="username" name="username" placeholder="Ingresá tu apellido:">
+        <label for="email">Correo electronico:</label>
+        <input type="text" id="email" name="email" placeholder="Ingresá tu correo electronico">
+        <label for="consulta">Consulta</label>
+        <textarea name="consulta" id="consulta" placeholder="Consulta"></textarea>
+        <div>
+          <button type="button">Enviar</button>
+        </div>
       </div>
-    </div>
   </div>
+  </form>
 </section>
