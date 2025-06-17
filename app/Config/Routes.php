@@ -42,4 +42,19 @@ $routes->group('admin', function ($routes) {
 
     $routes->get('consultas', 'ConsultasController::listar');
 
+    
+    $routes->get('categorias', 'CategoriaController::index');
+    $routes->get('categorias/nuevo', 'CategoriaController::new');
+    $routes->post('categorias/nuevo', 'CategoriaController::create');
+    $routes->delete('categorias/(:num)', 'CategoriaController::delete/$1');
+    $routes->get('categorias/edita/(:num)', 'CategoriaController::edit/$1');
+    $routes->post('categorias/edita/(:num)', 'CategoriaController::update/$1');
+
+    $routes->get('marcas', 'MarcaController::index');
+    $routes->get('marcas/nuevo', 'MarcaController::new');
+    $routes->post('marcas/nuevo', 'MarcaController::create');
+    $routes->post('marcas/eliminar/(:num)', 'MarcaController::delete/$1');
+    $routes->get('marcas/editar/(:num)', 'MarcaController::edit/$1');
+    $routes->post('marcas/editar/(:num)', 'MarcaController::update/$1');
+
 });
