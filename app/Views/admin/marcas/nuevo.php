@@ -16,7 +16,7 @@
   <h1 class="fw-bold display-4 text-center"><?php echo $titulo ?></h1>
   <form method="post" action="<?php echo base_url('admin/marcas/nuevo') ?>">
     <div class="container-input">
-      <label for="nombre">Nombre:</label>
+      <label for="nombre">Nombre de la Marca:</label>
       <input type="text" id="nombre" name="nombre" placeholder="Nombre de la Marca" required>
     </div>
     <button class="btn-base mt-3" type="submit">Agregar marca</button>

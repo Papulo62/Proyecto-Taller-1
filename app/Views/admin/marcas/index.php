@@ -30,9 +30,9 @@
         <td class="align-middle"><?php echo $marca['nombre']; ?></td>
         <td class="align-middle"><?php echo $marca['id']; ?></td>
         <td >
-          <a href="<?= base_url('admin/marcas/editar/'.$marca['id']); ?>">Editar</a>
+          <a href="<?= base_url('admin/marcas/editar/'.$marca['id']); ?>"><button class="btn-base">Editar</button></a>
 
-          <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
+          <button type="button" class="btn btn-danger btn-md" data-bs-toggle="modal"
             data-bs-target="#eliminaModal" data-bs-url="<?= base_url('admin/marcas/eliminar/'.$marca['id']); ?>">Eliminar</button>
         </td>
         </td>

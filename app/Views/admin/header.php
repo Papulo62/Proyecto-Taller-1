@@ -47,6 +47,16 @@
             Usuarios
           </a>
         </li>
+        <li class="nav-item">
+          <a class="navbar-link" href="<?php echo base_url('admin/categorias') ?>">
+            Categorias
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="navbar-link" href="<?php echo base_url('admin/marcas') ?>">
+            Marcas
+          </a>
+        </li>
     </div>
   </div>
 </nav>

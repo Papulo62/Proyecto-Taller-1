@@ -32,7 +32,7 @@ class  MarcaController extends BaseController
 	public function create()
 	{
 		$reglas=[
-			'nombre' => 'required|max_length[50]',
+			'nombre' => 'required|max_length[50]|is_unique',
 		];
 
 		 if ($reglas) {
@@ -72,7 +72,7 @@ class  MarcaController extends BaseController
 		}
 
 		$reglas=[
-			'nombre' => 'required|max_length[50]',
+			'nombre' => 'required|max_length[50]|is_unique',
 
 		];
 

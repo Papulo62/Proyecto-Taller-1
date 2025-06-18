@@ -30,9 +30,9 @@
         <td class="align-middle"><?php echo $categoria['nombre']; ?></td>
         <td class="align-middle"><?php echo $categoria['id']; ?></td>
         <td >
-          <a href="<?= base_url('admin/categorias/edita/'.$categoria['id']); ?>">Editar</a>
+          <a href="<?= base_url('admin/categorias/edita/'.$categoria['id']); ?>"><button class="btn-base btn-md">Editar</button></a>
 
-          <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
+          <button type="button" class="btn btn-danger btn-md " data-bs-toggle="modal"
             data-bs-target="#eliminaModal" data-bs-url="<?= base_url('admin/categorias/'.$categoria['id']); ?>">Eliminar</button>
         </td>
         </td>
