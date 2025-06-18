@@ -32,12 +32,14 @@
         <?php endforeach; ?>
       </div>
     </div>
-    <div class="carrito-resumen">
-      <h2 class="fw-bold my-0 mb-5">RESUMEN DEL PEDIDO</h2>
-      <p class="fw-bold my-0">Cantidad de productos: <?php echo count($productos); ?></p>
-      <p class="fw-bold my-0">Total: <?php echo $total ?></p>
-      <button class="btn-base" type="button">Ir a pagar</button>
-      <a class="btn-base" href="<?php echo base_url('carrito/vaciarCarrito') ?>">Vaciar Carrito</a>
-    </div>
+    <?php if (session()->get('productos_carrito')): ?>
+      <div class="carrito-resumen">
+        <h2 class="fw-bold my-0 mb-5">RESUMEN DEL PEDIDO</h2>
+        <p class="fw-bold my-0">Cantidad de productos: <?php echo count($productos); ?></p>
+        <p class="fw-bold my-0">Total: <?php echo $total ?></p>
+        <button class="btn-base" type="button">Ir a pagar</button>
+        <a class="btn-base" href="<?php echo base_url('carrito/vaciarCarrito') ?>">Vaciar Carrito</a>
+      </div>
+    <?php endif; ?>
   </div>
 </section>

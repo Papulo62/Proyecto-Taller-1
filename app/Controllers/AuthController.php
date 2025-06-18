@@ -14,31 +14,7 @@ class AuthController extends BaseController
     }
     public function index()
     {
-        $validations = $this->validate([
-            'email' => [
-                'rules' => 'required|valid_email',
-                'errors' => [
-                    'required' => 'El email es obligatorio',
-                    'valid_email' => 'Debe ingresar un email válido',
-                ]
-            ],
-            'contraseña' => [
-                'rules' => 'required|min_length[8]',
-                'errors' => [
-                    'required' => 'La contraseña es obligatoria',
-                    'min_length' => 'La contraseña debe tener al menos 8 caracteres'
-                ]
-            ],
-        ]);
-
-        if ($validations) {
-            $this->cargarVista('login', ['titulo' => 'Login']);
-        } else {
-            $this->cargarVista('login', [
-                'titulo' => 'Login',
-                'validaciones' => $this->validator
-            ]);
-        }
+        $this->cargarVista('login', ['titulo' => 'Login']);
     }
 
     public function vistaRegistro()
@@ -219,24 +195,49 @@ class AuthController extends BaseController
 
     public function login()
     {
+        $validations = $this->validate([
+            'email' => [
+                'rules' => 'required|valid_email',
+                'errors' => [
+                    'required' => 'El email es obligatorio',
+                    'valid_email' => 'Debe ingresar un email válido',
+                ]
+            ],
+            'contraseña' => [
+                'rules' => 'required|min_length[8]',
+                'errors' => [
+                    'required' => 'La contraseña es obligatoria',
+                    'min_length' => 'La contraseña debe tener al menos 8 caracteres'
+                ]
+            ],
+        ]);
+
+        if (!$validations) {
+            return $this->cargarVista('login', [
+                'titulo' => 'Login',
+                'validaciones' => $this->validator
+            ]);
+        }
+
         $session = session();
         $contraseña = $this->request->getPost('contraseña');
         $email = $this->request->getPost('email');
         $usuario = $this->usuarioModel->where('email', $email)->first();
+
         if (!$usuario) {
             return redirect()->back()->with('error', 'Usuario no encontrado');
         }
-        $data = [
-            'user_id' => $usuario['id'],
-            'user_name' => $usuario['nombre'],
-            'logged_in' => true,
-        ];
 
         if (password_verify($contraseña, $usuario['contraseña'])) {
+            $data = [
+                'user_id' => $usuario['id'],
+                'user_name' => $usuario['nombre'],
+                'logged_in' => true,
+            ];
             $session->set($data);
             return redirect()->to('/');
         } else {
-            return redirect()->back()->with('error', 'contraseña incorrecta');
+            return redirect()->back()->with('error', 'Credenciales incorrectas');
         }
     }
 

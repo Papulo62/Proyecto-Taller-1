@@ -21,6 +21,7 @@ $routes->post('insertar', 'ConsultasController::insertar');
 $routes->post('carrito/agregar', 'CarritoController::agregar');
 $routes->get('carrito/eliminar/(:num)', 'CarritoController::removerDelCarrito/$1');
 $routes->get('carrito/vaciarCarrito', 'CarritoController::vaciarCarrito');
+$routes->post('carrito/venta', 'CompraController::registrarVenta');
 $routes->get('carrito', 'CarritoController::index');
 $routes->get('registro', 'AuthController::vistaRegistro');
 $routes->post('registrar', 'AuthController::register');
@@ -41,8 +42,8 @@ $routes->group('admin', function ($routes) {
 
 
     $routes->get('consultas', 'ConsultasController::listar');
+    $routes->get('ventas', 'CompraController::listar');
 
-    
     $routes->get('categorias', 'CategoriaController::index');
     $routes->get('categorias/nuevo', 'CategoriaController::new');
     $routes->post('categorias/nuevo', 'CategoriaController::create');
