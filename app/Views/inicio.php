@@ -51,7 +51,7 @@
         alt="hombre-corriendo">
     </div>
     <h3 class="fw-bold fs-2">RUNNING HOMBRE</h3>
-    <a href="<?php echo base_url('/productos') ?>">
+    <a href="<?= base_url('productos/categoria/1/Masculino') ?>">
       <button type="button" class="btn-base">
         Hombres
       </button>
@@ -64,7 +64,7 @@
         alt="mujer-corriendo">
     </div>
     <h3 class="fw-bold fs-2">RUNNING MUJER</h3>
-    <a href="<?php echo base_url('/productos') ?>">
+    <a href="<?= base_url('productos/categoria/1/Femenino') ?>">
       <button type="button" class="btn-base">
         Mujeres
       </button>
@@ -74,16 +74,17 @@
 
 <h2 class="fw-bold px-5 mb-4 display-6" style="margin-top: 100px;">Novedades >>>></h2>
 <section class="d-flex gap-5 px-5 mt-5 carrousel">
-  <?php for ($i = 1; $i <= 6; $i++): ?>
-    <a class="text-decoration-none" href="<?php echo base_url('/detalle_producto') ?>">
+  <?php foreach ($productos as $producto): ?>
+    <a class="text-decoration-none" href="<?php echo base_url('detalle_producto/') . $producto['id'] ?>">
       <div style="max-width: 400px; cursor: pointer;">
-        <img width="100%" src="<?php echo base_url('assets/img/395345_02_sv01.png') ?>" alt="">
-        <h5 class="fw-bold">Zapatillas de running MagMax NITRO™ para hombre</h5>
-        <h5 class="fw-bold">$80.899</h5>
+        <img width="100%" src="<?php echo base_url('uploads/') . $producto['imagen'] ?>" alt="">
+        <h5 class="fw-bold"><?php echo $producto['nombre'] ?></h5>
+        <h5 class="fw-bold">$<?php echo formatear_precio($producto['precio']); ?></h5>
       </div>
     </a>
-  <?php endfor; ?>
+  <?php endforeach; ?>
 </section>
+<!--
 <section class="d-flex gap-3 px-5 mt-5 flex-column flex-md-row">
   <?php for ($i = 1; $i <= 3; $i++): ?>
     <?php $delay = ($i - 1) * 100; ?>
@@ -99,6 +100,7 @@
     </div>
   <?php endfor; ?>
 </section>
+-->
 <div class="mt-5">
   <img width="100%" data-aos="fade-up" data-aos-duration="1000"
     src="<?php echo base_url('assets/img/imagen-runnig.webp') ?>" alt="imagen-running">

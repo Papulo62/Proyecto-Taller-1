@@ -25,4 +25,36 @@ class PedidoModel extends Model
     protected $createdField = 'created_at';
     protected $updatedField = 'updated_at';
     protected $deletedField = 'deleted_at';
+
+    public function getPedidosConDetalles($pedido_id)
+    {
+        return $this->select('
+                pedido.id as pedido_id,
+                pedido.usuario_id,
+                pedido.total as pedido_total,
+                pedido.metodo_pago,
+                pedido.created_at,
+                dp.id as detalle_id,
+                pr.precio,
+                dp.cantidad,
+                dp.subtototal,
+                pr.nombre as producto_nombre,
+                pr.imagen,
+                pt.talle
+            ')
+            ->join('detalle_pedido dp', 'dp.pedido_id = pedido.id')
+            ->join('producto_talle pt', 'pt.id = dp.producto_talle_id')
+            ->join('producto pr', 'pr.id = pt.producto_id')
+            ->where('pedido.id', $pedido_id)
+            ->orderBy('pedido.created_at', 'DESC')
+            ->orderBy('dp.id', 'ASC')->get();
+
+    }
+
+    public function findAllWithUser()
+    {
+        return $this->select('pedido.*, usuario.nombre as nombre_usuario')
+            ->join('usuario', 'usuario.id = pedido.usuario_id', 'left')
+            ->findAll();
+    }
 }

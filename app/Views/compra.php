@@ -1,4 +1,5 @@
 <section class="mt-5 container-xl d-flex flex-column flex-md-row gap-5">
+  <?php $validaciones = session('validaciones'); ?>
   <?php if (session()->getFlashdata('success')): ?>
     <div class="alert alert-success alert-dismissible fade show" role="alert">
       <strong>¡Éxito!</strong> <?= session()->getFlashdata('success') ?>
@@ -14,39 +15,41 @@
   <?php endif; ?>
   <form method="post" action="<?php echo base_url('carrito/venta') ?>">
     <div class="d-flex flex-column gap-3">
-      <h2 class="fw-bold my-0">Contacto</h2>
-      <p class="my-0">antoniocoronel368@gmail.com</p>
       <h2 class="fw-bold">Direccion de Entrega</h2>
       <div class="login-input compra-input">
-        <div class="d-flex flex-column flex-md-row gap-4">
-          <div class="d-flex flex-column gap-2">
-            <label for="#">Nombre</label>
-            <input type="text" />
-          </div>
-          <div class="d-flex flex-column gap-2">
-            <label for="#">Apellido</label>
-            <input type="text" />
-          </div>
+        <div class="d-flex flex-column gap-2">
+          <label for="dni">DNI:</label>
+          <input name="dni" id="dni" type="text" />
+          <?php if (isset($validaciones) && $validaciones->hasError('dni'))
+            echo $validaciones->getError('dni'); ?>
         </div>
         <div class="d-flex flex-column gap-4">
           <div class="d-flex flex-column flex-md-row gap-4">
             <div class="d-flex flex-column gap-2">
-              <label for="#">Direccion</label>
-              <input type="text" />
+              <label for="direccion">Direccion</label>
+              <input name="direccion" id="direccion" type="text" />
+              <?php if (isset($validaciones) && $validaciones->hasError('direccion'))
+                echo $validaciones->getError('direccion'); ?>
             </div>
             <div class="d-flex flex-column gap-2">
-              <label for="#">Altura</label>
-              <input type="text" />
+              <label for="altura">Altura</label>
+              <input name="altura" id="altura" type="text" />
+              <?php if (isset($validaciones) && $validaciones->hasError('altura'))
+                echo $validaciones->getError('altura'); ?>
             </div>
           </div>
           <div class="d-flex flex-column flex-md-row gap-4">
             <div class="d-flex flex-column gap-2">
-              <label for="#">Localidad</label>
-              <input type="text" />
+              <label for="localidad">Localidad</label>
+              <input name="localidad" id="localidad" type="text" />
+              <?php if (isset($validaciones) && $validaciones->hasError('localidad'))
+                echo $validaciones->getError('localidad'); ?>
             </div>
             <div class="d-flex flex-column gap-2">
-              <label for="#">Codigo postal</label>
-              <input type="text" />
+              <label for="codigo">Codigo postal</label>
+              <input name="codigo" id="codigo" type="text" />
+              <?php if (isset($validaciones) && $validaciones->hasError('codigo'))
+                echo $validaciones->getError('codigo'); ?>
             </div>
           </div>
         </div>
@@ -55,9 +58,10 @@
         <div class="d-flex flex-column gap-3">
           <h2 class="fw-bold">Método de Pago</h2>
           <select name="metodo_pago">
-            <option value="value1">Tarjeta de credito</option>
-            <option value="value2" selected>Tarjeta de debito</option>
-            <option value="value3">Mercado Pago</option>
+            <option value="">Seleccionar metodo de pago</option>
+            <?php foreach ($metodos as $metodo): ?>
+              <option value="<?= $metodo ?>"><?= $metodo ?></option>
+            <?php endforeach; ?>
           </select>
           <?php if (isset($validaciones) && $validaciones->hasError('metodo_pago'))
             echo $validaciones->getError('metodo_pago'); ?>
@@ -70,22 +74,24 @@
     </div>
   </form>
   <div class="d-flex flex-column gap-3" style="width: 40%;">
-    <h2 class="fw-bold text-center">RESUMEN DE TU PEDIDO (4)</h2>
+    <h2 class="fw-bold text-center">RESUMEN DE TU PEDIDO</h2>
     <div class="d-flex flex-column gap-3">
-      <?php for ($i = 0; $i <= 3; $i++): ?>
+      <?php $total = 0 ?>
+      <?php foreach ($productos as $producto): ?>
         <div class="d-flex gap-3 p-2 p-md-3">
           <div style="width: 30%;">
-            <img width="100%" src="<?php echo base_url('assets/img/Botines KING MATCH TT para niños.png') ?>" alt=""
-              class="carrito-img">
+            <img width="100%" src="<?php echo base_url('uploads/') . $producto['imagen'] ?>" alt="" class="carrito-img">
           </div>
           <div class="d-flex flex-column gap-2">
-            <p class="my-0">Zapatillas Superstar II Core Black</p>
-            <p class="my-0">Taller 42(UK)</p>
-            <p class="my-0">Cantidad: 1</p>
-            <p class="text-end my-0">$ 189.99</p>
+            <p class="my-0"><?php echo $producto['nombre'] ?></p>
+            <p class="my-0">Talle: <?php echo $producto['talle'] ?></p>
+            <p class="my-0">Cantidad: <?php echo $producto['cantidad'] ?></p>
+            <p class="text-end my-0">$ <?php echo formatear_precio($producto['precio']); ?></p>
           </div>
         </div>
-      <?php endfor; ?>
+        <?php $total += $producto['total'] ?>
+      <?php endforeach; ?>
     </div>
+    <h2 class="fw-bold">Total: $<?php echo formatear_precio($total); ?></h2>
   </div>
 </section>

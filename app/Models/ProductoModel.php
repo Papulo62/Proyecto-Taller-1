@@ -14,7 +14,7 @@ class ProductoModel extends Model
     protected $returnType = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['nombre', 'descripcion', 'imagen', 'precio', 'categoria_id'];
+    protected $allowedFields = ['nombre', 'descripcion', 'imagen', 'precio', 'categoria_id', 'activo', 'marca_id', 'genero'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
@@ -25,4 +25,17 @@ class ProductoModel extends Model
     protected $createdField = 'created_at';
     protected $updatedField = 'updated_at';
     protected $deletedField = 'deleted_at';
+    public function buscarPorCategoria($categoria_id, $genero)
+    {
+        return $this->where('categoria_id', $categoria_id)
+            ->where('genero', $genero)
+            ->findAll();
+    }
+
+    public function obtenerUltimosProductos($limite)
+    {
+        return $this->orderBy('created_at', 'DESC')
+            ->limit($limite)
+            ->findAll();
+    }
 }
