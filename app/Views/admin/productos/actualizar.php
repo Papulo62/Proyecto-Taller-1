@@ -39,8 +39,31 @@
     <div class="form-group d-flex flex-column gap-2">
       <label for="categoria">Categoria:</label>
       <select name="categoria" id="categoria">
-        <option value="value1">Tarjeta de credito</option>
+        <?php foreach ($categorias as $categoria): ?>
+          <option value="<?= $categoria['id'] ?>"><?= $categoria['nombre'] ?></option>
+        <?php endforeach; ?>
       </select>
+      <?php if (isset($validaciones) && $validaciones->hasError('categoria'))
+        echo $validaciones->getError('categoria'); ?>
+    </div>
+    <div class="form-group d-flex flex-column gap-2">
+      <label for="marca">Marca:</label>
+      <select name="marca" id="marca">
+        <?php foreach ($marcas as $marca): ?>
+          <option value="<?= $marca['id'] ?>"><?= $marca['nombre'] ?></option>
+        <?php endforeach; ?>
+      </select>
+    </div>
+    <div class="form-group d-flex flex-column gap-2">
+      <label for="marca">Género:</label>
+      <select name="genero" id="genero" required>
+        <option value="">Seleccionar género</option>
+        <?php foreach ($generos as $genero): ?>
+          <option value="<?= $genero ?>"><?= $genero ?></option>
+        <?php endforeach; ?>
+      </select>
+      <?php if (isset($validaciones) && $validaciones->hasError('genero'))
+        echo $validaciones->getError('genero'); ?>
     </div>
     <div class="form-group cont-talle d-flex flex-column gap-3">
       <?php foreach ($talles as $index => $talle): ?>

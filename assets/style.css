@@ -127,7 +127,8 @@ i {
 
 /*es el boton que mas usamos, hay que cambiarle el nombre*/
 .btn-base {
-  padding: 8px 35px;
+  padding: 0px 35px;
+  height: 50px;
   background-color: black;
   /*
   otros colores que podemos usar
@@ -137,7 +138,7 @@ i {
   */
   color: white;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 8px;
   border: none;
 }
 

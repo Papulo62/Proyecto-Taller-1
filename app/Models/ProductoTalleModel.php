@@ -14,7 +14,7 @@ class ProductoTalleModel extends Model
     protected $returnType = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['producto_id', 'talle', 'stock'];
+    protected $allowedFields = ['producto_id', 'talle', 'stock', 'activo'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
@@ -25,4 +25,11 @@ class ProductoTalleModel extends Model
     protected $createdField = 'created_at';
     protected $updatedField = 'updated_at';
     protected $deletedField = 'deleted_at';
+
+    public function desactivarTalles($producto_id)
+    {
+        return $this->where('producto_id', $producto_id)
+            ->set(['activo' => 0])
+            ->update();
+    }
 }

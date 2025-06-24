@@ -8,6 +8,8 @@ use CodeIgniter\HTTP\IncomingRequest;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
+use App\Models\CategoriaModel;
+
 
 /**
  * Class BaseController
@@ -55,6 +57,9 @@ abstract class BaseController extends Controller
 
     public function cargarVista($vista, $data = [])
     {
+        $categoriaModel = new CategoriaModel();
+        $categorias = $categoriaModel->findAll();
+        $data['categorias'] = $categorias;
         $data['titulo'] = $data['titulo'] ?? 'Título por defecto';
         echo view('header', $data);
         echo view($vista);

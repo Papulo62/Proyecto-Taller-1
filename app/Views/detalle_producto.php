@@ -45,7 +45,7 @@
   <div class="d-flex flex-column flex-grow-1 gap-2 mt-0 mt-lg-5">
     <form method="post" action="<?php echo base_url('carrito/agregar') ?>">
       <h2 class="fw-bold d-none d-lg-block display-6"><?php echo $producto['nombre'] ?></h2>
-      <h2 class="fw-bold d-none d-lg-block display-6">$<?php echo $producto['precio'] ?></h2>
+      <h2 class="fw-bold d-none d-lg-block display-6">$<?php echo formatear_precio($producto['precio']); ?></h2>
       <p class="fw-bold fs-4">Selecciona tu talle: </p>
       <div class="producto-talle">
         <?php foreach ($talles as $talle): ?>

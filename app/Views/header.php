@@ -45,10 +45,12 @@
             </a>
             <div class="popover position-absolute">
               <ul class="list-unstyled d-flex flex-column gap-3">
-                <li>Running</li>
-                <li>Futbol</li>
-                <li>Basquet</li>
-                <li>Voley</li>
+                <?php foreach ($categorias as $categoria): ?>
+                  <li><a href="<?= base_url('productos/categoria/' . $categoria['id'] . '/Femenino') ?>"
+                      class="text-decoration-none text-dark">
+                      <?php echo $categoria['nombre'] ?>
+                    </a></li>
+                <?php endforeach; ?>
               </ul>
             </div>
           </li>
@@ -58,10 +60,14 @@
             </a>
             <div class="popover position-absolute">
               <ul class="list-unstyled d-flex flex-column gap-3">
-                <li>Running</li>
-                <li>Futbol</li>
-                <li>Basquet</li>
-                <li>Voley</li>
+                <?php foreach ($categorias as $categoria): ?>
+                  <li>
+                    <a href="<?= base_url('productos/categoria/' . $categoria['id'] . '/Masculino') ?>"
+                      class="text-decoration-none text-dark">
+                      <?php echo $categoria['nombre'] ?>
+                    </a>
+                  </li>
+                <?php endforeach; ?>
               </ul>
             </div>
           </li>
@@ -71,10 +77,14 @@
             </a>
             <div class="popover position-absolute">
               <ul class="list-unstyled d-flex flex-column gap-3">
-                <li>Running</li>
-                <li>Futbol</li>
-                <li>Basquet</li>
-                <li>Voley</li>
+                <?php foreach ($categorias as $categoria): ?>
+                  <li>
+                    <a href="<?= base_url('productos/categoria/' . $categoria['id']) ?>"
+                      class="text-decoration-none text-dark">
+                      <?php echo $categoria['nombre'] ?>
+                    </a>
+                  </li>
+                <?php endforeach; ?>
               </ul>
             </div>
           </li>
@@ -109,7 +119,7 @@
             <span><?php echo session()->get('user_name'); ?></span>
           </button>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="<?php echo base_url('usuario_perfil') ?>">Mi perfil</a></li>
             <li><a class="dropdown-item" href="<?php echo base_url('/logout') ?>">Cerrar sesion</a></li>
           </ul>
         </div>

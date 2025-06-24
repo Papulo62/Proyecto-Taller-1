@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="<?= base_url('assets/custom.css') ?>">
   <link rel="stylesheet" href="<?= base_url('assets/style.css') ?>">
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -57,8 +58,18 @@
             Marcas
           </a>
         </li>
+        <li class="nav-item">
+          <a class="navbar-link" href="<?php echo base_url('admin/ventas') ?>">
+            Ventas
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="navbar-link" href="<?php echo base_url('/') ?>">
+            Ir al cliente
+          </a>
+        </li>
     </div>
   </div>
 </nav>
 
-<body style="height: 100vh;">
+<body class="d-flex flex-column min-vh-100">

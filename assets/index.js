@@ -63,7 +63,7 @@ const stockTalles = {};
 
 
 
-btnTalle.forEach((btn) => {
+btnTalle?.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     btnTalle.forEach(item => item.classList.remove("active"));
     e.target.classList.add("active");
@@ -78,7 +78,7 @@ btnTalle.forEach((btn) => {
   });
 });
 
-btnSuma.addEventListener("click", () => {
+btnSuma?.addEventListener("click", () => {
   if (conteo < stockOriginal) {
     conteo++;
     containerSuma.value = conteo;
@@ -88,7 +88,7 @@ btnSuma.addEventListener("click", () => {
   }
 });
 
-btnResta.addEventListener("click", () => {
+btnResta?.addEventListener("click", () => {
   if (conteo > 0) {
     conteo--;
     containerSuma.value = conteo;
@@ -112,14 +112,14 @@ document.addEventListener('DOMContentLoaded', () => {
         popover.classList.toggle('popover-active');
     }
     
-    navItems.forEach(item => {
+    navItems?.forEach(item => {
       let navLink = item.querySelector(".navbar-link");
       let linkClass = item == popoverTrigger ? 'navbar-link-active' : 'navbar-link-disable'
       event.type == 'mouseenter' ? navLink.classList.add(linkClass) : navLink.classList.remove(linkClass)
     })
   }
   
-  navItems.forEach(item =>{
+  navItems?.forEach(item =>{
     item.addEventListener('mouseenter', togglePopover);
     item.addEventListener('mouseleave', togglePopover);
   })

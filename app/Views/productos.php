@@ -8,7 +8,7 @@
     </nav>
   </div>
   <div class="d-flex justify-content-between align-items-center mb-5">
-    <h1 class="fw-bold display-6 d-none d-md-block">ZAPATILLAS PARA HOMBRE</h1>
+    <h1 class="fw-bold display-6 d-none d-md-block">ZAPATILLAS PARA CUALQUIERA</h1>
     <div class="dropdown">
       <button class="btn-filtro dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         ORDENAR POR
@@ -26,7 +26,7 @@
         <div class="d-flex flex-column" style="width: 100%; border: 1px solid gray">
           <div class="d-flex justify-content-between align-items-center p-2">
             <h6 class="my-0"><?php echo $producto['nombre'] ?></h6>
-            <h6 class="my-0">$<?php echo $producto['precio'] ?></h6>
+            <h6 class="my-0">$<?php echo formatear_precio($producto['precio']); ?></h6>
           </div>
           <div class="imagen-producto">
             <img width="100%" style="border-bottom: 1px solid gray; border-top: 1px solid gray;"

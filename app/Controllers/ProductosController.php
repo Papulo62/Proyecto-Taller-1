@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\ProductoModel;
+use App\Models\CategoriaModel;
+use App\Models\MarcaModel;
 use App\Models\ProductoTalleModel;
 
 class ProductosController extends BaseController
@@ -15,22 +17,51 @@ class ProductosController extends BaseController
   }
   public function index()
   {
-    $producto = $this->productoModel->findAll();
+    $producto = $this->productoModel->where('activo', 1)->findAll();
+    $categoriaModel = new CategoriaModel();
+    $categorias = $categoriaModel->where('activo', 1)->findAll();
     $this->cargarVista('productos', [
       'titulo' => 'Productos',
-      'productos' => $producto
+      'productos' => $producto,
+      'categorias' => $categorias
+
+    ]);
+  }
+
+  public function buscarPorCategoria($categoria_id = null, $genero = null)
+  {
+    $productos = $this->productoModel->buscarPorCategoria($categoria_id, $genero);
+    $this->cargarVista('productos', [
+      'titulo' => 'Productos',
+      'productos' => $productos,
+      'genero' => $genero
     ]);
   }
 
   public function producto()
   {
-    $this->cargarVistaAdmin('productos/agregar', ['titulo' => 'Agregar Producto']);
+    $marcaModel = new MarcaModel();
+    $categoriaModel = new CategoriaModel();
+    $categorias = $categoriaModel->where('activo', 1)->findAll();
+    $marcas = $marcaModel->where('activo', 1)->findAll();
+
+    $generos = ['Masculino', 'Femenino', 'Niños/as'];
+
+    $this->cargarVistaAdmin('productos/agregar', [
+      'titulo' => 'Agregar Producto',
+      'categorias' => $categorias,
+      'generos' => $generos,
+      'marcas' => $marcas
+    ]);
+
   }
+
 
   public function vistaDetalleProducto($id)
   {
     $producto = $this->productoModel->find($id);
-
+    $categoriaModel = new CategoriaModel();
+    $categorias = $categoriaModel->findAll();
     $productoTalleModel = new ProductoTalleModel();
     $talles = $productoTalleModel->where('producto_id', $id)->findAll();
 
@@ -41,6 +72,7 @@ class ProductosController extends BaseController
     return $this->cargarVista('detalle_producto', [
       'titulo' => 'Detalle de producto',
       'producto' => $producto,
+      'categorias' => $categorias,
       'talles' => $talles
     ]);
 
@@ -82,6 +114,7 @@ class ProductosController extends BaseController
         ]
       ],
 
+
       'talle.*' => [
         'rules' => 'required|is_natural',
         'errors' => [
@@ -107,13 +140,12 @@ class ProductosController extends BaseController
         'descripcion' => $this->request->getPost('descripcion'),
         'imagen' => $nuevoNombre,
         'precio' => $this->request->getPost('precio'),
-        'categoria_id' => 1
+        'categoria_id' => $this->request->getPost('categoria'),
+        'marca_id' => $this->request->getPost('marca'),
+        'genero' => $this->request->getPost('genero')
       ];
 
-
-
       $this->productoModel->insert($data);
-
       $productoTalleModel = new ProductoTalleModel();
 
       $productoId = $this->productoModel->getInsertID();
@@ -132,9 +164,18 @@ class ProductosController extends BaseController
 
       return redirect()->to('admin/productos/agregar')->with('success', 'Producto registrado correctamente');
     } else {
+      $marcaModel = new MarcaModel();
+      $categoriaModel = new CategoriaModel();
+      $categorias = $categoriaModel->where('activo', 1)->findAll();
+      $marcas = $marcaModel->where('activo', 1)->findAll();
+
+      $generos = ['Masculino', 'Femenino', 'Niños/as'];
       $this->cargarVistaAdmin('productos/agregar', [
         'validaciones' => $this->validator,
-        'titulo' => 'Agregar Productos'
+        'titulo' => 'Agregar Productos',
+        'categorias' => $categorias,
+        'generos' => $generos,
+        'marcas' => $marcas
       ]);
     }
   }
@@ -143,7 +184,7 @@ class ProductosController extends BaseController
   {
     $productoTalleModel = new ProductoTalleModel();
     $talles = $productoTalleModel->findAll();
-    $productos = $this->productoModel->findAll();
+    $productos = $this->productoModel->where('activo', 1)->findAll();
     $this->cargarVistaAdmin('productos/listar', [
       'titulo' => 'Productos',
       'productos' => $productos,
@@ -158,6 +199,12 @@ class ProductosController extends BaseController
 
     $productoTalleModel = new ProductoTalleModel();
     $talles = $productoTalleModel->where('producto_id', $id)->findAll();
+    $marcaModel = new MarcaModel();
+    $categoriaModel = new CategoriaModel();
+    $categorias = $categoriaModel->where('activo', 1)->findAll();
+    $marcas = $marcaModel->where('activo', 1)->findAll();
+
+    $generos = ['Masculino', 'Femenino', 'Niños/as'];
 
     if (!$producto) {
       return redirect()->back()->with('error', 'Producto no encontrado');
@@ -166,7 +213,10 @@ class ProductosController extends BaseController
     return $this->cargarVistaAdmin('productos/actualizar', [
       'titulo' => 'Editar producto',
       'producto' => $producto,
-      'talles' => $talles
+      'talles' => $talles,
+      'categorias' => $categorias,
+      'generos' => $generos,
+      'marcas' => $marcas
     ]);
 
   }
@@ -221,7 +271,9 @@ class ProductosController extends BaseController
         'nombre' => $this->request->getPost('nombre'),
         'descripcion' => $this->request->getPost('descripcion'),
         'precio' => $this->request->getPost('precio'),
-        'categoria_id' => 1
+        'categoria_id' => $this->request->getPost('categoria'),
+        'genero' => $this->request->getPost('genero'),
+        'marca_id' => $this->request->getPost('marca'),
       ];
       $imagen = $this->request->getFile('imagen');
       if ($imagen && $imagen->isValid() && !$imagen->hasMoved()) {
@@ -266,11 +318,20 @@ class ProductosController extends BaseController
 
       $producto = $this->productoModel->find($id);
       $talles = $productoTalleModel->where('producto_id', $id)->findAll();
+      $marcaModel = new MarcaModel();
+      $categoriaModel = new CategoriaModel();
+      $categorias = $categoriaModel->where('activo', 1)->findAll();
+      $marcas = $marcaModel->where('activo', 1)->findAll();
+
+      $generos = ['Masculino', 'Femenino', 'Niños/as'];
 
       return $this->cargarVistaAdmin('productos/actualizar', [
         'validaciones' => $this->validator,
         'producto' => $producto,
         'talles' => $talles,
+        'categorias' => $categorias,
+        'generos' => $generos,
+        'marcas' => $marcas,
         'titulo' => 'Actualizar Producto'
       ]);
     }
@@ -279,7 +340,10 @@ class ProductosController extends BaseController
 
   public function eliminar($id)
   {
-
+    $productoTalleModel = new ProductoTalleModel();
+    $this->productoModel->update($id, ['activo' => 0]);
+    $productoTalleModel->desactivarTalles($id);
+    return redirect()->to('admin/productos');
   }
 
 }

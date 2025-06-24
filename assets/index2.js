@@ -1,22 +1,31 @@
-
-
 const imagen = document.getElementById("imagen");
 const containerInput = document.querySelector(".cont-talle");
 const img = document.getElementById("img");
 const btnTalle = document.querySelector(".btn-agregar-talle");
-
-
-
+const tablas = document.querySelectorAll('.tabla');
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("hola si funciona");
-  if(containerInput.childElementCount == 1){
+    if (containerInput) {
+      if (containerInput.childElementCount == 1) {
+        agregarTalle();
+      } else {
+        agregarEventos();
+      }
+    }
+  btnTalle?.addEventListener("click", () => {
     agregarTalle();
-  }else{
-    agregarEventos();
-  }
-  btnTalle.addEventListener("click", () => {
-    agregarTalle();
-  })
+  });
+
+  tablas.forEach(tabla => {
+    new DataTable(tabla, {
+      paging: true,
+      searching: true,
+      ordering: true,
+      language: {
+        url: 'https://cdn.datatables.net/plug-ins/1.10.21/i18n/Spanish.json'  
+      },
+      pageLength: 5
+    });
+  });
 })
 const agregarTalle = ()=>{
   const btnDisabled = document.querySelector('button:disabled')
@@ -43,21 +52,20 @@ const eliminarTalle = (btn) =>{
       }
     });
 } 
-imagen.addEventListener('change', (e) => {
+imagen?.addEventListener('change', (e) => {
+    const labelImagen = document.querySelector('label[for="imagen"]');
+    
     if(e.target.files[0]){
         file = new FileReader();
         file.onload = (e) => {
             img.src = e.target.result;
         }
         file.readAsDataURL(e.target.files[0]);
+        labelImagen.innerHTML = '<i class="fas fa-check-circle"></i> Imagen agregada correctamente';
+        labelImagen.style.backgroundColor = '#28a745';
+    } else {
+        labelImagen.innerHTML = '<i class="fas fa-upload"></i> Seleccionar Imagen';
+        labelImagen.style.backgroundColor = '#007bff';
     }
-});
-
-btnSuma.addEventListener("click", () => {
-  console.log("hola");
-});
-
-btnResta.addEventListener("click", () => {
-  console.log("hola");
 });
 
