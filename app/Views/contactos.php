@@ -17,17 +17,24 @@
     <form method="post" action="<?php echo base_url('insertar') ?>">
       <div class="container-input">
         <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" placeholder="Ingresá tu nombre:">
-        <label for="username">Apellido:</label>
-        <input type="text" id="username" name="username" placeholder="Ingresá tu apellido:">
-        <label for="email">Correo electronico:</label>
-        <input type="text" id="email" name="email" placeholder="Ingresá tu correo electronico">
-        <label for="consulta">Consulta</label>
-        <textarea name="consulta" id="consulta" placeholder="Consulta"></textarea>
-        <div>
-          <button type="button">Enviar</button>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingresá tu nombre:">
+        <?php if (isset($validaciones) && $validaciones->hasError('nombre'))
+          echo $validaciones->getError('nombre') ?>
+          <label for="apellido">Apellido:</label>
+          <input type="text" id="apellido" name="apellido" placeholder="Ingresá tu apellido:">
+        <?php if (isset($validaciones) && $validaciones->hasError('apellido'))
+          echo $validaciones->getError('apellido') ?>
+          <label for="email">Correo electronico:</label>
+          <input type="text" id="email" name="email" placeholder="Ingresá tu correo electronico">
+        <?php if (isset($validaciones) && $validaciones->hasError('email'))
+          echo $validaciones->getError('email') ?>
+          <label for="consulta">Consulta</label>
+          <textarea name="consulta" id="consulta" placeholder="Consulta"></textarea>
+        <?php if (isset($validaciones) && $validaciones->hasError('consulta'))
+          echo $validaciones->getError('consulta') ?>
+          <div>
+            <button type="summit">Enviar</button>
+          </div>
         </div>
-      </div>
-  </div>
-  </form>
-</section>
+      </form>
+  </section>

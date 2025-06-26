@@ -170,7 +170,7 @@ class UsuarioController extends BaseController
             return redirect()->to('usuario_perfil')->with('success', 'Perfil actualizado correctamente');
         } else {
             $usuario = $this->usuarioModel->find($usuarioId);
-            return view('perfil/editar_perfil', [
+            $this->cargarVista('perfil_actualizar', [
                 'usuario' => $usuario,
                 'validaciones' => $this->validator
             ]);

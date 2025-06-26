@@ -30,7 +30,7 @@ class ProductosController extends BaseController
 
   public function buscarPorCategoria($categoria_id = null, $genero = null)
   {
-    $productos = $this->productoModel->buscarPorCategoria($categoria_id, $genero);
+    $productos = $this->productoModel->where('activo', 1)->buscarPorCategoria($categoria_id, $genero);
     $this->cargarVista('productos', [
       'titulo' => 'Productos',
       'productos' => $productos,
@@ -251,9 +251,8 @@ class ProductosController extends BaseController
         ]
       ],
       'imagen' => [
-        'rules' => 'uploaded[imagen]|is_image[imagen]|mime_in[imagen,image/jpg,image/jpeg,image/png,image/gif]|max_size[imagen,2048]',
+        'rules' => 'is_image[imagen]|mime_in[imagen,image/jpg,image/jpeg,image/png,image/gif]|max_size[imagen,2048]',
         'errors' => [
-          'uploaded' => 'La imagen es obligatoria',
           'is_image' => 'El archivo debe ser una imagen válida',
           'mime_in' => 'Solo se permiten imágenes JPG, JPEG, PNG o GIF',
           'max_size' => 'La imagen no puede pesar más de 2MB'

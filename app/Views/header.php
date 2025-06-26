@@ -120,6 +120,8 @@
           </button>
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="<?php echo base_url('usuario_perfil') ?>">Mi perfil</a></li>
+            <li><a class="dropdown-item" href="<?php echo base_url('perfil/lista-de-compras') ?>">Mis compras</a></li>
+
             <li><a class="dropdown-item" href="<?php echo base_url('/logout') ?>">Cerrar sesion</a></li>
           </ul>
         </div>

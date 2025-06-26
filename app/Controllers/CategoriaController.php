@@ -68,7 +68,7 @@ class CategoriaController extends BaseController
 	public function update($id = null)
 	{
 		$reglas = [
-			'nombre' => 'required|max_length[50]|is_unique',
+			'nombre' => 'required|max_length[50]',
 
 		];
 

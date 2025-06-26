@@ -58,6 +58,6 @@
         <?= isset($validaciones) && $validaciones->hasError('c-contraseña') ? '<span class="text-danger">' . $validaciones->getError('c-contraseña') . '</span>' : '' ?>
 
         <button type="submit">Actualizar cuenta</button>
-        <a class="text-center fs-5 fw-bold" href="<?= base_url('perfil') ?>">Volver a mi perfil</a>
+        <a class="text-center fs-5 fw-bold" href="<?= base_url('usuario_perfil') ?>">Volver a mi perfil</a>
     </form>
 </section>

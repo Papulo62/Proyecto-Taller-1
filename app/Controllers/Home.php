@@ -5,6 +5,8 @@ use App\Models\CategoriaModel;
 use App\Models\ProductoModel;
 use App\Models\UsuarioModel;
 use App\Models\ProductoTalleModel;
+use App\Models\PedidoModel;
+use App\Models\DetallePedidoModelModel;
 
 class Home extends BaseController
 {
@@ -52,6 +54,42 @@ class Home extends BaseController
 
         ]);
 
+    }
+
+    /*public function misCompras()
+    {
+        $pedidoModel = new PedidoModel();
+        $usuarioId = session()->get('user_id');
+        $pedidoDetalles = $pedidoModel->getPedidosConDetallesDeUsuario($usuarioId);
+        $totalPedido = $pedidoDetalles->getRowArray()['pedido_total'];
+        $this->cargarVista('mis_compras', [
+            'titulo' => 'Detalle del pedido',
+            'detalles' => $pedidoDetalles->getResultArray(),
+            'total_pedido' => $totalPedido
+        ]);
+    }*/
+
+    public function detalleCompra($pedido_id)
+    {
+        $pedidoModel = new PedidoModel();
+        $pedidoDetalles = $pedidoModel->getPedidosConDetalles($pedido_id);
+        $totalPedido = $pedidoDetalles->getRowArray()['pedido_total'];
+        $this->cargarVista('mis_compras', [
+            'titulo' => 'Detalle de Compra',
+            'detalles' => $pedidoDetalles->getResultArray(),
+            'total_pedido' => $totalPedido
+        ]);
+    }
+
+    public function listaDeCompras()
+    {
+        $pedidoModel = new PedidoModel();
+        $usuarioId = session()->get('user_id');
+        $pedidos = $pedidoModel->where('usuario_id', $usuarioId)->FindAll();
+        $this->cargarVista('lista_de_compras', [
+            'pedidos' => $pedidos,
+            'titulo' => 'Lista de Compras'
+        ]);
     }
 
     public function vistaUsuario()

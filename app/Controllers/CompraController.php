@@ -78,7 +78,7 @@ class CompraController extends BaseController
         $dni = $this->request->getPost('dni');
         $direccion = $this->request->getPost('direccion');
         $altura = $this->request->getPost('altura');
-        $localidad = $this->request->getPost('localidad'); // Corregir el name en el form
+        $localidad = $this->request->getPost('localidad');
         $codigoPostal = $this->request->getPost('codigo');
         $metodoPago = $this->request->getPost('metodo_pago');
 
@@ -130,6 +130,7 @@ class CompraController extends BaseController
             'codigo_postal' => $codigoPostal,
             'created_at' => $fechaActual,
         ];
+
 
         $pedidoId = $pedidoModel->insert($dataPedido);
 

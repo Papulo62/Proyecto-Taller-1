@@ -31,6 +31,8 @@ $routes->post('login', 'AuthController::login');
 $routes->get('/logout', 'AuthController::logout');
 $routes->post('perfil/eliminar-cuenta/(:num)', 'UsuarioController::eliminarCuenta/$1');
 $routes->get('perfil/editar', 'UsuarioController::editarPerfil');
+$routes->get('perfil/lista-de-compras/mis-compras/(:num)', 'Home::detalleCompra/$1');
+$routes->get('perfil/lista-de-compras', 'Home::listaDeCompras');
 $routes->post('perfil/actualizar', 'UsuarioController::actualizarPerfil');
 $routes->group('admin', function ($routes) {
     $routes->get('/', 'Admin::panel');

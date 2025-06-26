@@ -72,7 +72,7 @@ class MarcaController extends BaseController
 		}
 
 		$reglas = [
-			'nombre' => 'required|max_length[50]|is_unique',
+			'nombre' => 'required|max_length[50]',
 
 		];
 

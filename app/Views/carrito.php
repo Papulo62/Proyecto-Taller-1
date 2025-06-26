@@ -34,8 +34,9 @@
             </div>
             <div>
               <p class="fw-bold text-end text-md-start"><?php echo formatear_precio($producto['precio']); ?></p>
-              <a href="<?php echo base_url('carrito/eliminar/') . $producto['producto_id'] ?>" class="btn-base"
-                type="button" style="background-color: white; color: black; border: 1px solid black;">
+              <a href="<?php echo base_url('carrito/eliminar/') . $producto['producto_id'] ?>"
+                class="btn-base d-flex align-items-center" type="button"
+                style="background-color: white; color: black; border: 1px solid black;">
                 Eliminar
               </a>
             </div>
@@ -52,7 +53,8 @@
         <a href="<?php echo base_url('compra') ?>">
           <button class="btn-base" type="button">Ir a pagar</button>
         </a>
-        <a class="btn-base" href="<?php echo base_url('carrito/vaciarCarrito') ?>">Vaciar Carrito</a>
+        <a class="btn-base d-flex align-items-center" href="<?php echo base_url('carrito/vaciarCarrito') ?>">
+          Vaciar Carrito</a>
       </div>
     <?php endif; ?>
     <?php if (!session()->get('productos_carrito')): ?>

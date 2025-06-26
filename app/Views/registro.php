@@ -11,7 +11,7 @@
   <form method="post" action="<?php echo base_url('registrar') ?>" class="container-input">
     <label for="name">Nombre:</label>
     <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre:"
-      value="<?php echo set_value('nombre') ?>" required>
+      value="<?php echo set_value('nombre') ?>">
     <?php if (isset($validaciones) && $validaciones->hasError('nombre'))
       echo $validaciones->getError('nombre') ?>
       <label for="username">Apellido:</label>

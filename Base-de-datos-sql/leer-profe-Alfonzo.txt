@@ -1,0 +1,1 @@
+Buenas profe, ahi le hicimos los cambios que nos dijo, el error tambien lo arreglamos, solo era que el caché del navegador estaba saturado por eso no mostraba el css,ctrl+f5 y listo, tambien le añadimos un apartado de compras en el cliente, esta en el dropdown , si nos puede subir un puntito por solucionar eso nos serviria jajaj, que tenga buen finde.

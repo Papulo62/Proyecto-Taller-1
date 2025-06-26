@@ -14,7 +14,7 @@ class PedidoModel extends Model
     protected $returnType = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['usuario_id', 'total', 'metodo_pago'];
+    protected $allowedFields = ['usuario_id', 'total', 'metodo_pago', 'dni', 'localidad', 'direccion', 'codigo_postal', 'altura'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
@@ -27,6 +27,23 @@ class PedidoModel extends Model
     protected $deletedField = 'deleted_at';
 
     public function getPedidosConDetalles($pedido_id)
+    {
+        return $this->agregarJoins()->where('pedido.id', $pedido_id)
+            ->orderBy('pedido.created_at', 'DESC')
+            ->orderBy('dp.id', 'ASC')->get();
+
+
+    }
+    public function getPedidosConDetallesDeUsuario($usuarioId)
+    {
+        return $this->agregarJoins()
+            ->where('pedido.usuario_id', $usuarioId)
+            ->orderBy('pedido.created_at', 'DESC')
+            ->orderBy('dp.id', 'ASC')->get();
+
+    }
+
+    private function agregarJoins()
     {
         return $this->select('
                 pedido.id as pedido_id,
@@ -44,11 +61,7 @@ class PedidoModel extends Model
             ')
             ->join('detalle_pedido dp', 'dp.pedido_id = pedido.id')
             ->join('producto_talle pt', 'pt.id = dp.producto_talle_id')
-            ->join('producto pr', 'pr.id = pt.producto_id')
-            ->where('pedido.id', $pedido_id)
-            ->orderBy('pedido.created_at', 'DESC')
-            ->orderBy('dp.id', 'ASC')->get();
-
+            ->join('producto pr', 'pr.id = pt.producto_id');
     }
 
     public function findAllWithUser()
