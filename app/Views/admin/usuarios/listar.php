@@ -13,9 +13,6 @@
 <?php endif; ?>
 <section class="container-xl mt-5">
   <h1 class="fw-bold text-center display-4 mb-4">Usuarios</h1>
-  <div class="d-flex justify-content-end mb-5">
-    <button class="btn-base" type="submit">Agregar usuario</button>
-  </div>
   <table class="table my-3">
     <thead class="table-dark">
       <tr>

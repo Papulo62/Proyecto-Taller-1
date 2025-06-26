@@ -1,4 +1,12 @@
 <section class="container-xl mt-5 d-flex flex-column align-items-center gap-3">
+  <div class="d-flex justify-content-start px-5" style="width: 100%;">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="<?php echo base_url('admin/productos') ?>">Productos</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Editar Producto</li>
+      </ol>
+    </nav>
+  </div>
   <?php if (session()->getFlashdata('success')): ?>
     <div class="alert alert-success alert-dismissible fade show" role="alert">
       <strong>¡Éxito!</strong> <?= session()->getFlashdata('success') ?>
@@ -40,7 +48,9 @@
       <label for="categoria">Categoria:</label>
       <select name="categoria" id="categoria">
         <?php foreach ($categorias as $categoria): ?>
-          <option value="<?= $categoria['id'] ?>"><?= $categoria['nombre'] ?></option>
+          <option value="<?= $categoria['id'] ?>" <?= ($categoria['id'] == $producto['categoria_id']) ? 'selected' : '' ?>>
+            <?= $categoria['nombre'] ?>
+          </option>
         <?php endforeach; ?>
       </select>
       <?php if (isset($validaciones) && $validaciones->hasError('categoria'))
@@ -50,7 +60,9 @@
       <label for="marca">Marca:</label>
       <select name="marca" id="marca">
         <?php foreach ($marcas as $marca): ?>
-          <option value="<?= $marca['id'] ?>"><?= $marca['nombre'] ?></option>
+          <option value="<?= $marca['id'] ?>" <?= ($marca['id'] == $producto['marca_id']) ? 'selected' : '' ?>>
+            <?= $marca['nombre'] ?>
+          </option>
         <?php endforeach; ?>
       </select>
     </div>
@@ -59,7 +71,9 @@
       <select name="genero" id="genero" required>
         <option value="">Seleccionar género</option>
         <?php foreach ($generos as $genero): ?>
-          <option value="<?= $genero ?>"><?= $genero ?></option>
+          <option value="<?= $genero ?>" <?= ($genero == $producto['genero']) ? 'selected' : '' ?>>
+            <?= $genero ?>
+          </option>
         <?php endforeach; ?>
       </select>
       <?php if (isset($validaciones) && $validaciones->hasError('genero'))

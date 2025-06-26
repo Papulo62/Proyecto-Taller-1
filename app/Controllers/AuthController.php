@@ -232,10 +232,11 @@ class AuthController extends BaseController
             $data = [
                 'user_id' => $usuario['id'],
                 'user_name' => $usuario['nombre'],
+                'user_rol' => $usuario['rol_id'],
                 'logged_in' => true,
             ];
             $session->set($data);
-            return redirect()->to('/');
+            return redirect()->to($usuario['rol_id'] == 1 ? '/' : 'admin/productos');
         } else {
             return redirect()->back()->with('error', 'Credenciales incorrectas');
         }

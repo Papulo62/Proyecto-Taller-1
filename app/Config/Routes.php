@@ -14,7 +14,7 @@ $routes->get('usuario_perfil', 'Home::vistaUsuario');
 $routes->get('comercializacion', 'Home::vistaComercializacion');
 $routes->get('compra', 'Home::vistaCompra');
 $routes->get('productos', 'ProductosController::index');
-$routes->get('productos/categoria/(:num)/(:alpha)', 'ProductosController::buscarPorCategoria/$1/$2');
+$routes->get('productos/categoria/(:num)/(:segment)', 'ProductosController::buscarPorCategoria/$1/$2');
 $routes->get('detalle_producto/(:num)', 'ProductosController::vistaDetalleProducto/$1');
 $routes->get('favoritos', 'ProductosController::vistaFavoritos');
 $routes->get('login', 'AuthController::index');
@@ -29,6 +29,9 @@ $routes->get('registro', 'AuthController::vistaRegistro');
 $routes->post('registrar', 'AuthController::register');
 $routes->post('login', 'AuthController::login');
 $routes->get('/logout', 'AuthController::logout');
+$routes->post('perfil/eliminar-cuenta/(:num)', 'UsuarioController::eliminarCuenta/$1');
+$routes->get('perfil/editar', 'UsuarioController::editarPerfil');
+$routes->post('perfil/actualizar', 'UsuarioController::actualizarPerfil');
 $routes->group('admin', function ($routes) {
     $routes->get('/', 'Admin::panel');
     $routes->get('usuarios/editar/(:num)', 'AuthController::editar/$1');

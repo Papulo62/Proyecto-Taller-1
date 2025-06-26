@@ -1,4 +1,12 @@
 <section class="container-xl mt-5 d-flex flex-column align-items-center gap-3">
+  <div class="d-flex justify-content-start px-5" style="width: 100%;">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="<?php echo base_url('admin/productos') ?>">Productos</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Agregar Producto</li>
+      </ol>
+    </nav>
+  </div>
   <?php if (session()->getFlashdata('success')): ?>
     <div class="alert alert-success alert-dismissible fade show" role="alert">
       <strong>¡Éxito!</strong> <?= session()->getFlashdata('success') ?>

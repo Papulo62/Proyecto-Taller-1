@@ -45,7 +45,7 @@ class ProductosController extends BaseController
     $categorias = $categoriaModel->where('activo', 1)->findAll();
     $marcas = $marcaModel->where('activo', 1)->findAll();
 
-    $generos = ['Masculino', 'Femenino', 'Niños/as'];
+    $generos = ['Masculino', 'Femenino', 'Niños'];
 
     $this->cargarVistaAdmin('productos/agregar', [
       'titulo' => 'Agregar Producto',
@@ -99,12 +99,14 @@ class ProductosController extends BaseController
       ],
 
       'imagen' => [
-        'rules' => 'uploaded[imagen]',
+        'rules' => 'uploaded[imagen]|is_image[imagen]|mime_in[imagen,image/jpg,image/jpeg,image/png,image/gif]|max_size[imagen,2048]',
         'errors' => [
-          'uploaded' => 'La imagen es obligatoria'
+          'uploaded' => 'La imagen es obligatoria',
+          'is_image' => 'El archivo debe ser una imagen válida',
+          'mime_in' => 'Solo se permiten imágenes JPG, JPEG, PNG o GIF',
+          'max_size' => 'La imagen no puede pesar más de 2MB'
         ]
       ],
-
       'precio' => [
         'rules' => 'required|integer|greater_than[0]',
         'errors' => [
@@ -162,14 +164,14 @@ class ProductosController extends BaseController
         $productoTalleModel->insert($data2);
       }
 
-      return redirect()->to('admin/productos/agregar')->with('success', 'Producto registrado correctamente');
+      return redirect()->to('admin/productos')->with('success', 'Producto registrado correctamente');
     } else {
       $marcaModel = new MarcaModel();
       $categoriaModel = new CategoriaModel();
       $categorias = $categoriaModel->where('activo', 1)->findAll();
       $marcas = $marcaModel->where('activo', 1)->findAll();
 
-      $generos = ['Masculino', 'Femenino', 'Niños/as'];
+      $generos = ['Masculino', 'Femenino', 'Niños'];
       $this->cargarVistaAdmin('productos/agregar', [
         'validaciones' => $this->validator,
         'titulo' => 'Agregar Productos',
@@ -204,7 +206,7 @@ class ProductosController extends BaseController
     $categorias = $categoriaModel->where('activo', 1)->findAll();
     $marcas = $marcaModel->where('activo', 1)->findAll();
 
-    $generos = ['Masculino', 'Femenino', 'Niños/as'];
+    $generos = ['Masculino', 'Femenino', 'Niños'];
 
     if (!$producto) {
       return redirect()->back()->with('error', 'Producto no encontrado');
@@ -246,6 +248,15 @@ class ProductosController extends BaseController
           'required' => 'El precio es obligatorio',
           'decimal' => 'El precio debe ser un numero con decimales',
           'greater_than' => 'El precio debe ser mayor que cero'
+        ]
+      ],
+      'imagen' => [
+        'rules' => 'uploaded[imagen]|is_image[imagen]|mime_in[imagen,image/jpg,image/jpeg,image/png,image/gif]|max_size[imagen,2048]',
+        'errors' => [
+          'uploaded' => 'La imagen es obligatoria',
+          'is_image' => 'El archivo debe ser una imagen válida',
+          'mime_in' => 'Solo se permiten imágenes JPG, JPEG, PNG o GIF',
+          'max_size' => 'La imagen no puede pesar más de 2MB'
         ]
       ],
 
@@ -323,7 +334,7 @@ class ProductosController extends BaseController
       $categorias = $categoriaModel->where('activo', 1)->findAll();
       $marcas = $marcaModel->where('activo', 1)->findAll();
 
-      $generos = ['Masculino', 'Femenino', 'Niños/as'];
+      $generos = ['Masculino', 'Femenino', 'Niños'];
 
       return $this->cargarVistaAdmin('productos/actualizar', [
         'validaciones' => $this->validator,

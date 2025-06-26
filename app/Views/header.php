@@ -79,7 +79,7 @@
               <ul class="list-unstyled d-flex flex-column gap-3">
                 <?php foreach ($categorias as $categoria): ?>
                   <li>
-                    <a href="<?= base_url('productos/categoria/' . $categoria['id']) ?>"
+                    <a href="<?= base_url('productos/categoria/' . $categoria['id'] . '/Niños') ?>"
                       class="text-decoration-none text-dark">
                       <?php echo $categoria['nombre'] ?>
                     </a>

@@ -11,9 +11,9 @@ class Home extends BaseController
     public function index()
     {
         $productoModel = new ProductoModel();
-        $ultimosProductos = $productoModel->obtenerUltimosProductos(6);
+        $ultimosProductos = $productoModel->where('activo', 1)->obtenerUltimosProductos(6);
         $categoriasModel = new CategoriaModel();
-        $categorias = $categoriasModel->findAll();
+        $categorias = $categoriasModel->where('activo', 1)->findAll();
         $this->cargarVista('inicio', [
             'titulo' => 'Inicio',
             'categorias' => $categorias,

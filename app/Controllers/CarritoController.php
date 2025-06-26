@@ -41,6 +41,16 @@ class CarritoController extends BaseController
         $cantidad = $this->request->getPost('cantidad');
         $talleId = $this->request->getPost('talle_id');
         $talle = $productoTalleModel->find($talleId);
+        if (!$talle) {
+            return redirect()->back()->with('error', 'Tienes que seleccionar un talle');
+        }
+
+        if ($cantidad < 1) {
+            return redirect()->back()->with('error', 'Tienes que seleccionar la cantidad');
+        }
+        if ($talle['stock'] < 1) {
+            return redirect()->back()->with('error', 'Producto sin stock disponible');
+        }
         $productos = session()->get('productos_carrito') ?? [];
 
         $productoExistente = false;

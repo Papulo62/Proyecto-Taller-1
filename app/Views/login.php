@@ -7,6 +7,12 @@
       </ol>
     </nav>
   </div>
+  <?php if (session()->getFlashdata('error')): ?>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <strong>¡Error!</strong> <?= session()->getFlashdata('error') ?>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  <?php endif; ?>
   <form method="post" action="<?php echo base_url('login') ?>">
     <h1 class="display-3 fw-bold mt-2 mt-lg-4">Iniciar sesión</h1>
     <div class="container-input">

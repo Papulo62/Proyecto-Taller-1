@@ -14,6 +14,7 @@ use CodeIgniter\Filters\PerformanceMetrics;
 use CodeIgniter\Filters\SecureHeaders;
 use App\Filters\Auth;
 use App\Filters\UnAuth;
+use App\Filters\Admin;
 
 class Filters extends BaseFilters
 {
@@ -38,6 +39,7 @@ class Filters extends BaseFilters
     'performance' => PerformanceMetrics::class,
     'auth' => Auth::class,
     'unauth' => UnAuth::class,
+    'admin' => Admin::class,
   ];
 
   /**
@@ -112,6 +114,8 @@ class Filters extends BaseFilters
       'before' => [
         'favoritos',
         'carrito',
+        'admin',
+        'admin/*'
       ]
     ],
     'unauth' => [
@@ -119,6 +123,12 @@ class Filters extends BaseFilters
         'login',
         'registro',
       ]
-    ]
+    ],
+    'admin' => [
+      'before' => [
+        'admin',
+        'admin/*'
+      ]
+    ],
   ];
 }

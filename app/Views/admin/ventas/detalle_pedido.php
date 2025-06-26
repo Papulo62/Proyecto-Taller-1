@@ -12,6 +12,14 @@
     </div>
 <?php endif; ?>
 <section class="container-xl mt-5">
+    <div class="d-flex justify-content-start px-5" style="width: 100%;">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="<?php echo base_url('admin/ventas') ?>">Ventas</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Detalle de venta</li>
+            </ol>
+        </nav>
+    </div>
     <h1 class="fw-bold text-center display-4 mb-4">Detalle de venta</h1>
     <table class="table my-3">
         <thead class="table-dark">

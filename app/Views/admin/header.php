@@ -32,42 +32,51 @@
       <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body align-items-center">
-      <ul class="navbar-nav flex-grow-1">
-        <li class="nav-item position-relative">
-          <a class="navbar-link" href="<?php echo base_url('admin/productos') ?>">
-            Productos
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="navbar-link" href="<?php echo base_url('admin/consultas') ?>">
-            Consultas
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="navbar-link" href="<?php echo base_url('admin/usuarios') ?>">
-            Usuarios
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="navbar-link" href="<?php echo base_url('admin/categorias') ?>">
-            Categorias
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="navbar-link" href="<?php echo base_url('admin/marcas') ?>">
-            Marcas
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="navbar-link" href="<?php echo base_url('admin/ventas') ?>">
-            Ventas
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="navbar-link" href="<?php echo base_url('/') ?>">
-            Ir al cliente
-          </a>
-        </li>
+      <li class="nav-item position-relative">
+        <a class="navbar-link" href="<?php echo base_url('admin/productos') ?>">
+          Productos
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="navbar-link" href="<?php echo base_url('admin/consultas') ?>">
+          Consultas
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="navbar-link" href="<?php echo base_url('admin/usuarios') ?>">
+          Usuarios
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="navbar-link" href="<?php echo base_url('admin/categorias') ?>">
+          Categorias
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="navbar-link" href="<?php echo base_url('admin/marcas') ?>">
+          Marcas
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="navbar-link" href="<?php echo base_url('admin/ventas') ?>">
+          Ventas
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="navbar-link" href="<?php echo base_url('/') ?>">
+          Ir al cliente
+        </a>
+      </li>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa-regular fa-user"></i>
+          <span><?php echo session()->get('user_name'); ?></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="<?php echo base_url('usuario_perfil') ?>">Mi perfil</a></li>
+          <li><a class="dropdown-item" href="<?php echo base_url('/logout') ?>">Cerrar sesion</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>
